@@ -17,31 +17,89 @@ import Menu from './components/Menu'
 import Cursor from './components/Cursor'
 
 
+
 function App() {
 
-  const [menuClass, setMenuClass] = useState('menu-hidden')
+  const [menuClass, setMenuClass] = useState('menu')
   const [linkHover, setLinkHover] = useState(false)
+  const [currentLink, setCurrentLink] = useState('')
+  const [headerClass, setHeaderClass] = useState('large-header-home')
+
 
   useEffect(() => {
-    const addLinkEvents = () => {
+    const addEventListeners = () => {
       document.querySelectorAll('a').forEach((link) => {
         link.addEventListener('mouseover', () => setLinkHover(true))
         link.addEventListener('mouseout', () => setLinkHover(false))
         link.addEventListener('mousedown', () => setLinkHover(false))
+        link.addEventListener('mousedown', () => updateLink())
+        link.addEventListener('mousedown', () => checkHeaderClass)
       })
+
+      document.querySelectorAll('.clickable').forEach((clicker) => {
+        clicker.addEventListener('mouseover', () => setLinkHover(true))
+        clicker.addEventListener('mouseout', () => setLinkHover(false))
+        clicker.addEventListener('mousedown', () => setLinkHover(false))
+        clicker.addEventListener('mousedown', () => updateLink())
+        clicker.addEventListener('mousedown', () => checkHeaderClass())
+      })
+
+      const doc = document.querySelector('.app')
+      doc.addEventListener('mousemove', () => checkHeaderClass())
+      doc.addEventListener('mousemove', () => updateLink())
     }
 
-    addLinkEvents()
+    const removeEventListeners = () => {
+      document.querySelectorAll('a').forEach((link) => {
+        link.removeEventListener('mouseover', () => setLinkHover(true))
+        link.removeEventListener('mouseout', () => setLinkHover(false))
+        link.removeEventListener('mousedown', () => setLinkHover(false))
+        link.removeEventListener('mousedown', () => updateLink())
+        link.removeEventListener('mousedown', () => checkHeaderClass)
+      })
 
-  }, [linkHover])
+      document.querySelectorAll('.clickable').forEach((clicker) => {
+        clicker.removeEventListener('mouseover', () => setLinkHover(true))
+        clicker.removeEventListener('mouseout', () => setLinkHover(false))
+        clicker.removeEventListener('mousedown', () => setLinkHover(false))
+        clicker.removeEventListener('mousedown', () => updateLink())
+        clicker.removeEventListener('mousedown', () => checkHeaderClass())
+      })
+
+      const doc = document.querySelector('.app')
+      doc.removeEventListener('mousemove', () => checkHeaderClass())
+      doc.removeEventListener('mousemove', () => updateLink())
+    }
+
+    addEventListeners()
+
+    const checkHeaderClass = () => {
+      let thisClass = 'large-header'
+      if(currentLink === 'http://localhost:3000/') {
+        thisClass = 'large-header-home'
+      } 
+      setHeaderClass(thisClass)
+    }
+
+    const updateLink = () => {
+      setCurrentLink(window.location.href)
+    }
+
+    return () => removeEventListeners()
+
+  }, [linkHover, currentLink])
+
+
 
   const toggleMenu = () => {
     if (menuClass === 'menu') {
-      setMenuClass('menu-hidden animate__animated animate__slideOutRight animate__slow')
+      setMenuClass('menu menu-active')
     } else {
       setMenuClass('menu')
     }
   }
+
+
 
   const updateCursor = (event) => {
     const cursor = document.querySelector(".cursor")
@@ -64,10 +122,12 @@ function App() {
     cursor.style.display = ''
   }
 
+
+
   return (
     <Router>
       <div className="app" onMouseMove={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
-        <HeaderContainer toggleMenu={toggleMenu}/>
+        <HeaderContainer toggleMenu={toggleMenu} headerClass={headerClass}/>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/dev" component={Dev} />

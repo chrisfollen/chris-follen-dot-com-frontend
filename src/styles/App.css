@@ -13,7 +13,6 @@ body {
     border: 2px solid  #DE5858;
     border-radius: 50%;
     position: absolute;
-    /* transform: translate(-50%, -50%); */
     pointer-events: none;
     z-index: 200000;
 }
@@ -95,13 +94,26 @@ p {
     color: white;
 }
 
+.large-header-home {
+    width: 92%;
+    position: relative;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-header-home h1 {
+    text-align: center;
+    float: none;
+    color: black;
+}
+
 .large-header-menu h6 {
     padding-right: 6px;
     color: white;
-}
-
-.menu-hidden {
-    display: none;
 }
 
 .menu {
@@ -111,14 +123,19 @@ p {
     align-items: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    position: absolute;
+    position: fixed;
     z-index: 2000;
-    right: 0;
+    right: -100%;
     top: 0;
-    width: 35%;
+    width: 30%;
     max-width: 600px;
     height: 100%;
     background-color: white;
+    transition: all .6s ease;
+}
+
+.menu-active {
+    right: 0%;
 }
 
 .menu-social-links {
@@ -135,7 +152,7 @@ p {
 }
 
 .menu h3 {
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 8px;
     padding-top: 36px;
     padding-bottom: 36px;
@@ -148,17 +165,18 @@ p {
 .menu-close {
     width: 80%;
     text-align: right;
+    cursor: pointer;
 }
 
 .menu-close > h3 {
-    font-size: 64px;
+    font-size: 48px;
 }
 
 .menu-close:hover {
     cursor: pointer;
 }
 
-.animate__animated.animate__slideOutRight {
-    --animate-duration: 2s;
+.clickable:hover {
+    cursor: pointer;
 }
 

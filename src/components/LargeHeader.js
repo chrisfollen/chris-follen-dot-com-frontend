@@ -9,11 +9,11 @@ export default function LargeHeader(props) {
 
 
     return (
-        <div className='large-header'>
+        <div className={props.headerClass}>
             <Link to="/">
                 <h1>CHRIS FOLLEN</h1>
             </Link>
-            <div className='large-header-menu' onClick={openMenu}>
+            <div className='large-header-menu clickable' onClick={openMenu}>
                 <h6>MENU</h6>
                 <h6>☰</h6>
             </div>

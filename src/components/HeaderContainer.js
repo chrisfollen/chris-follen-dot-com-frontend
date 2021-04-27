@@ -4,7 +4,7 @@ import LargeHeader from './LargeHeader'
 export default function HeaderContainer(props) {
     return (
         <div className = 'header-container'>
-            <LargeHeader toggleMenu={props.toggleMenu}/>
+            <LargeHeader toggleMenu={props.toggleMenu} headerClass={props.headerClass}/>
         </div>
     )
 }
