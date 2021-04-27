@@ -1,0 +1,48 @@
+.not-found {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/404.jpg?alt=media&token=b92cbdfb-79f7-4706-b7c8-315a11664d8e");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.not-found h2 {
+    font-size: 96px;
+    letter-spacing: 12px;
+    line-height: 180px;
+    color: #DE5858;
+    padding-top: 180px;
+}
+
+.not-found h6 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    line-height: 64px;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 140px;
+    width: 60%;
+    text-transform: uppercase;
+}
+
+.red-text {
+    color: #DE5858;
+}
