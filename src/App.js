@@ -27,12 +27,13 @@ function App() {
       document.querySelectorAll('a').forEach((link) => {
         link.addEventListener('mouseover', () => setLinkHover(true))
         link.addEventListener('mouseout', () => setLinkHover(false))
+        link.addEventListener('mousedown', () => setLinkHover(false))
       })
     }
 
     addLinkEvents()
 
-  }, [])
+  }, [linkHover])
 
   const toggleMenu = () => {
     if (menuClass === 'menu') {
@@ -46,6 +47,11 @@ function App() {
     const cursor = document.querySelector(".cursor")
     cursor.style.left = `${event.pageX}px`
     cursor.style.top = `${event.pageY}px`
+    if(linkHover === true){
+      cursor.style.transform = 'scale(2) translate(-25%, -25%)'
+    } else {
+      cursor.style.transform = 'scale(1) translate(-50%, -50%)'
+    }
   }
 
   const hideCursor = (event) => {
@@ -57,8 +63,6 @@ function App() {
     const cursor = document.querySelector(".cursor")
     cursor.style.display = ''
   }
-
-  
 
   return (
     <Router>
