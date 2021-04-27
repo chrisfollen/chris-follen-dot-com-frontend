@@ -5,6 +5,7 @@ import './styles/Dev.css'
 import './styles/Photo.css'
 import './styles/Journal.css'
 import './styles/About.css'
+import './styles/NotFound.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -15,6 +16,7 @@ import Journal from './Journal'
 import About from './About'
 import Menu from './components/Menu'
 import Cursor from './components/Cursor'
+import NotFound from './NotFound'
 
 
 
@@ -134,6 +136,7 @@ function App() {
           <Route path="/photo" component={Photo} />
           <Route path="/journal" component={Journal} />
           <Route path="/about" component={About} />
+          <Route component={NotFound} />
         </Switch>
       <Menu currentClass={menuClass} toggleMenu={toggleMenu}/>
       <Cursor />
