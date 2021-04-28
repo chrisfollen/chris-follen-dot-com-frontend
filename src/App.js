@@ -17,6 +17,7 @@ import About from './About'
 import Menu from './components/Menu'
 import Cursor from './components/Cursor'
 import NotFound from './NotFound'
+import Footer from './components/Footer'
 
 
 
@@ -26,6 +27,7 @@ function App() {
   const [linkHover, setLinkHover] = useState(false)
   const [currentLink, setCurrentLink] = useState('')
   const [headerClass, setHeaderClass] = useState('large-header-home')
+  const [footerClass, setFooterClass] = useState('footer-hidden')
 
 
   useEffect(() => {
@@ -49,6 +51,7 @@ function App() {
       const doc = document.querySelector('.app')
       doc.addEventListener('mousemove', () => checkHeaderClass())
       doc.addEventListener('mousemove', () => updateLink())
+      doc.addEventListener('mousemove', () => checkFooterClass())
     }
 
     const removeEventListeners = () => {
@@ -70,6 +73,7 @@ function App() {
 
       const doc = document.querySelector('.app')
       doc.removeEventListener('mousemove', () => checkHeaderClass())
+      doc.removeEventListener('mousemove', () => checkFooterClass())
       doc.removeEventListener('mousemove', () => updateLink())
     }
 
@@ -80,8 +84,21 @@ function App() {
       if(currentLink === 'http://localhost:3000/') {
         thisClass = 'large-header-home'
       } 
+      console.log(thisClass)
       setHeaderClass(thisClass)
     }
+
+    const checkFooterClass = () => {
+      let thisFooterClass
+      if(currentLink === 'http://localhost:3000/') {
+        thisFooterClass = 'footer footer-hidden'
+      } else {
+        thisFooterClass = 'footer'
+      }
+      console.log(thisFooterClass)
+      setFooterClass(thisFooterClass)
+    }
+
 
     const updateLink = () => {
       setCurrentLink(window.location.href)
@@ -140,6 +157,7 @@ function App() {
         </Switch>
       <Menu currentClass={menuClass} toggleMenu={toggleMenu}/>
       <Cursor />
+      <Footer footerClass={footerClass}/>
       </div>
     </Router>
   );

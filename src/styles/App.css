@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville&display=swap');
 
 
@@ -52,8 +52,7 @@ h6 {
 }
 
 p {
-    font-family: 'Libre Baskerville', serif;
-    line-height: 200px;
+    font-family: 'Merriweather', serif;
 }
 
 .header-container {
@@ -178,5 +177,24 @@ p {
 
 .clickable:hover {
     cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    z-index: 1005;
+    background-color: black;
+}
+
+.footer p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.footer-hidden {
+    display: none;
 }
 
