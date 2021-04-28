@@ -117,7 +117,7 @@ hr {
     justify-content: center;
 }
 
-.resume-image-container::before {
+/* .resume-image-container::before {
     position: absolute;
     top: 80px;
     left: 80px;
@@ -125,7 +125,7 @@ hr {
     height: 82%;
     border: 1px solid white;
     content: '';
-  }
+  } */
 
 .resume-image-container img {
     width: 100%;
