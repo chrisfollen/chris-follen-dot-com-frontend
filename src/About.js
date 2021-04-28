@@ -3,24 +3,58 @@ import React from 'react'
 export default function About() {
     return (
         <div className = 'about'>
-            <div className='about-container'>
-                <div className='about-hero-info'>
-                    <h3>Hello, I'm Chris!</h3>
-                    <h3>Developer & Photographer</h3>
-                </div>
-                <div className='about-photo-and-info-container'>
-                    <div className='about-image-container'>
-                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/headshot-1.jpg?alt=media&token=9699d3b3-ac4b-45bb-a915-17c898851efa' alt='chris headshot' />
+            <div className='about-outer-container'>
+                <div className='about-container'>
+                    <div className='about-hero-info'>
+                        <h3>Hello, I'm Chris!</h3>
+                        <h3>Developer & Photographer</h3>
                     </div>
-                    <div className='about-info' >
-                        <div>
-                            <h4>Motorcycles. Tacos. Guitar.</h4>
-                            <h4>Stoicism. Skiing. Rioja.</h4>
+                    <div className='about-photo-and-info-container'>
+                        <div className='about-image-container'>
+                            <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/headshot-1.jpg?alt=media&token=9699d3b3-ac4b-45bb-a915-17c898851efa' alt='chris headshot' />
                         </div>
-                        <p>Pug small batch everyday carry, photo booth hexagon health goth poutine meggings direct trade kinfolk tattooed vice whatever before they sold out portland. Butcher unicorn kombucha, beard echo park viral kogi fam. Asymmetrical whatever wayfarers chartreuse man braid copper mug. Lomo kickstarter scenester, fixie normcore chicharrones prism intelligentsia trust fund slow-carb lo-fi umami you probably haven't heard of them pickled roof party. Craft beer kale chips four dollar toast umami before they sold out succulents literally man braid cray tilde. Listicle disrupt air plant, live-edge put a bird on it chillwave quinoa tote bag gochujang gluten-free vice mumblecore tacos.</p>
+                        <div className='about-info' >
+                            <div>
+                                <h4>Motorcycles. Tacos. Guitar.</h4>
+                                <h4>Stoicism. Skiing. Rioja.</h4>
+                            </div>
+                            <div>
+                                <p>I’m so glad you found your way to my website, and I hope my work puts a smile on your face.</p>
+                                <p>I'm a front-end web developer and freelance photographer based in Boulder, Colorado. 
+                                I like thinking, creating, problem solving, and learning. I’m passionate 
+                                about everything I do, and am particularly intrigued by work that marries an aesthetic component 
+                                with a technical one.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
+                <div className='resume-container'>
+                    <div className='resume-header'>
+                        <h3>Resume</h3>
+                    </div>
+                    <div className='resume-image-container'>
+                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/resume.png?alt=media&token=b8ca6670-f67a-46ab-807e-f09c7b6448e5' alt='chris resume' />
+                    </div>
+
+                </div>
+                <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
+                <div className='contact-container'>
+                    <div className='contact-header'>
+                        <h3>Contact</h3>
+                    </div>
+                    <div className='contact-text'>
+                        <h4>Let's build something rad together!</h4>
+                        <h4>Drop me a <a href="mailto:chris@chrisfollen.com" className='clickable red-text'>line</a></h4>
+                    </div>
+                    <div className='contact-links'>
+                        <a href='mailto:chris@chrisfollen.com' className='clickable'>email</a>
+                        <a href='https://github.com/chrisfollen' className='clickable'>github</a>
+                        <a href='https://www.instagram.com/chris.follen/' className='clickable'>instagram</a>
+                        <a href='https://www.linkedin.com/in/chrisfollen/' className='clickable'>linkedin</a>
                     </div>
                 </div>
-
             </div>
         </div>
     )

@@ -84,18 +84,16 @@ function App() {
       if(currentLink === 'http://localhost:3000/') {
         thisClass = 'large-header-home'
       } 
-      console.log(thisClass)
       setHeaderClass(thisClass)
     }
 
     const checkFooterClass = () => {
       let thisFooterClass
       if(currentLink === 'http://localhost:3000/') {
-        thisFooterClass = 'footer footer-hidden'
+        thisFooterClass = 'footer-hidden'
       } else {
         thisFooterClass = 'footer'
       }
-      console.log(thisFooterClass)
       setFooterClass(thisFooterClass)
     }
 

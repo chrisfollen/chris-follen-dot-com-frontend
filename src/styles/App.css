@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 body {
@@ -52,7 +53,7 @@ h6 {
 }
 
 p {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header-container {
@@ -184,8 +185,9 @@ p {
     justify-content: center;
     align-items: center;
     height: 380px;
-    z-index: 1005;
-    background-color: black;
+    z-index: 1500;
+    background-color: rgb(10, 10, 10);
+    width: 100%;
 }
 
 .footer p {
