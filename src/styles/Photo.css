@@ -1,5 +1,5 @@
 .photo {
-    background-color: black;
+    background-color:rgb(10, 10, 10);
     top: 0;
     left: 0;
     width: 100%;
@@ -8,7 +8,7 @@
 }
 
 .gallery-container {
-    padding-top: 120px;
+    padding-top: 180px;
     margin: auto;
     display: flex;
     flex-direction: row;
