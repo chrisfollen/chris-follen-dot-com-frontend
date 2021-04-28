@@ -5,8 +5,88 @@
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .about h2 {
     color: white;
 }
+
+.about h3 {
+    color: white;
+    font-size: 68px;
+    line-height: 90px;
+    letter-spacing: 8px;
+    text-transform: lowercase;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 320px;
+}
+
+.about-hero-info {
+    text-align: left;
+}
+
+.about-photo-and-info-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1500px;
+    padding-top: 100px;
+}
+
+.about-image-container {
+    width: 48%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-container::before {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    width: 85%;
+    height: 100%;
+    border: 1px solid #DE5858;
+    content: '';
+  }
+
+.about-image-container img {
+    width: 85%;
+}
+
+.about h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    color:  #DE5858;
+    letter-spacing: 4px;
+    line-height: 50px;
+}
+
+.about p {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 2px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    justify-content: space-around;
+}
+
+
