@@ -27,6 +27,14 @@ export default function About() {
                             </div>
                         </div>
                     </div>
+                    <div className='about-quote-container'>
+                        <div className='about-quote'>
+                            <h5>"Simplicity is the ultimate sophistication."</h5>
+                        </div>
+                        <div className='about-quote-author'>
+                            <h5>-Leonardo da Vinci</h5>
+                        </div>
+                    </div>
 
                 </div>
                 <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
