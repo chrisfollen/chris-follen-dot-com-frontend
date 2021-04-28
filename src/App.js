@@ -7,6 +7,7 @@ import './styles/Journal.css'
 import './styles/About.css'
 import './styles/NotFound.css'
 import './styles/Preload.css'
+import './styles/Loader.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -20,6 +21,7 @@ import Cursor from './components/Cursor'
 import NotFound from './NotFound'
 import Footer from './components/Footer'
 import Preload from './components/Preload'
+import Loader from './components/Loader'
 
 
 
@@ -31,6 +33,7 @@ function App() {
   const [headerClass, setHeaderClass] = useState('large-header-home')
   const [footerClass, setFooterClass] = useState('footer-hidden')
   const [preloading, setPreloading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,10 +42,10 @@ function App() {
   }, [])
 
   useEffect(() => {
-    setPreloading(true)
+    setLoading(true)
     setTimeout(() => {
-      setPreloading(false)
-    }, 3500)
+      setLoading(false)
+    }, 1800)
   }, [currentLink])
 
 
@@ -161,6 +164,7 @@ function App() {
     <Router>
       <div className="app" onMouseMove={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
         <Preload loadState={preloading}/>
+        <Loader loadState={loading} />
         <HeaderContainer toggleMenu={toggleMenu} headerClass={headerClass}/>
         <Switch>
           <Route path="/" exact component={Home} />
