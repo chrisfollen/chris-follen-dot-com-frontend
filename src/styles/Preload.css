@@ -1,0 +1,68 @@
+.preload{
+    z-index: 300000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s linear;
+}
+
+.preload-hidden {
+    opacity: 0;
+    z-index: -50;
+    
+}
+
+.preload h1 {
+    color: white;
+    font-size: 48px;
+    opacity: .8;
+}
+
+.l1 {
+    animation: letter 2s ease .2s;
+}
+.l2 {
+    animation: letter 2s ease .4s;
+}
+.l3 {
+    animation: letter 2s ease .6s;
+}
+.l4 {
+    animation: letter 2s ease .8s;
+}
+.l5 {
+    animation: letter 2s ease 1s;
+}
+.l6 {
+    animation: letter 2s ease 1.2s;
+}
+.l7 {
+    animation: letter 2s ease 1.4s;
+}
+.l8 {
+    animation: letter 2s ease 1.6s;
+}
+.l9 {
+    animation: letter 2s ease 1.8s;
+}
+.l10 {
+    animation: letter 2s ease 2.0s;
+}
+.l11 {
+    animation: letter 2s ease 2.2s;
+}
+
+@keyframes letter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
