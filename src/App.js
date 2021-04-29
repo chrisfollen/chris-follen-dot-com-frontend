@@ -67,6 +67,12 @@ function App() {
         clicker.addEventListener('mousedown', () => checkHeaderClass())
       })
 
+      document.querySelectorAll('.clickable-photo').forEach((clicker) => {
+        clicker.addEventListener('mouseover', () => setLinkHover(true))
+        clicker.addEventListener('mouseout', () => setLinkHover(false))
+        clicker.addEventListener('mousedown', () => setLinkHover(false))
+      })
+
       const doc = document.querySelector('.app')
       doc.addEventListener('mousemove', () => checkHeaderClass())
       doc.addEventListener('mousemove', () => updateLink())
@@ -88,6 +94,12 @@ function App() {
         clicker.removeEventListener('mousedown', () => setLinkHover(false))
         clicker.removeEventListener('mousedown', () => updateLink())
         clicker.removeEventListener('mousedown', () => checkHeaderClass())
+      })
+
+      document.querySelectorAll('.clickable-photo').forEach((clicker) => {
+        clicker.removeEventListener('mouseover', () => setLinkHover(true))
+        clicker.removeEventListener('mouseout', () => setLinkHover(false))
+        clicker.removeEventListener('mousedown', () => setLinkHover(false))
       })
 
       const doc = document.querySelector('.app')

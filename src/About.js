@@ -6,7 +6,7 @@ export default function About() {
             <div className='about-outer-container'>
                 <div className='about-container'>
                     <div className='about-hero-info'>
-                        <h3>Hello, I'm Chris!</h3>
+                        <h3>Hi There, I'm Chris!</h3>
                         <h3>Developer & Photographer</h3>
                     </div>
                     <div className='about-photo-and-info-container'>
@@ -20,7 +20,7 @@ export default function About() {
                             </div>
                             <div>
                                 <p>I’m so glad you found your way to my website, and I hope my work puts a smile on your face.</p>
-                                <p>I'm a front-end web developer and freelance photographer based in Boulder, Colorado. 
+                                <p className='p2'>I'm a front-end web developer and freelance photographer based in Boulder, Colorado. 
                                 I like thinking, creating, problem solving, and learning. I’m passionate 
                                 about everything I do, and am particularly intrigued by work that marries an aesthetic component 
                                 with a technical one.</p>
@@ -57,10 +57,10 @@ export default function About() {
                         <h4>Drop me a <a href="mailto:chris@chrisfollen.com" className='clickable red-text'>line</a></h4>
                     </div>
                     <div className='contact-links'>
-                        <a href='mailto:chris@chrisfollen.com' className='clickable'>email</a>
-                        <a href='https://github.com/chrisfollen' className='clickable'>github</a>
-                        <a href='https://www.instagram.com/chris.follen/' className='clickable'>instagram</a>
-                        <a href='https://www.linkedin.com/in/chrisfollen/' className='clickable'>linkedin</a>
+                        <a href='mailto:chris@chrisfollen.com' className='clickable' target="_blank" rel="noreferrer">email</a>
+                        <a href='https://github.com/chrisfollen' className='clickable' target="_blank" rel="noreferrer">github</a>
+                        <a href='https://www.instagram.com/chris.follen/' className='clickable' target="_blank" rel="noreferrer">instagram</a>
+                        <a href='https://www.linkedin.com/in/chrisfollen/' className='clickable' target="_blank" rel="noreferrer">linkedin</a>
                     </div>
                 </div>
             </div>
