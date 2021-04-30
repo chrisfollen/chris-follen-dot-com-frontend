@@ -174,7 +174,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app" onMouseMove={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
+      <div className="app" onMouseMove={updateCursor} onScroll={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
         <Preload loadState={preloading}/>
         <Loader loadState={loading} />
         <HeaderContainer toggleMenu={toggleMenu} headerClass={headerClass}/>
