@@ -14,7 +14,7 @@ export default function Preload(props) {
 
     return (
         <div className={checkClass()}>
-            <img src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/CF-03.png?alt=media&token=f9b5ca1b-b640-41ba-a045-d28340bb641a" alt="chris logo" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/CF_white.png?alt=media&token=94e8a773-6470-4532-89ac-f734df36228a" alt="chris logo" />
         </div>
     )
 }
