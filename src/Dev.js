@@ -14,7 +14,7 @@ export default function Dev() {
                         <p className = 'dev-project-description'>Info here</p>
                         <div className = 'dev-project-links'>
                             <a href="https://github.com/chrisfollen/Dat-Place-App" target="_blank" rel="noreferrer" >GitHub</a>
-                            <a href="https://github.com/chrisfollen/virtual_bartender" target="_blank" rel="noreferrer" >YouTube</a>
+                            <a href="https://youtu.be/Bqc3w53eidw" target="_blank" rel="noreferrer" >YouTube</a>
                         </div>
                     </div>
                     <div className = 'dev-project-card'>
