@@ -21,7 +21,7 @@
 }
 
 .loader img {
-    width: 60px;
+    width: 40px;
     height: 40px;
     animation: image linear 1.2s infinite alternate;
 }
