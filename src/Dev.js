@@ -11,7 +11,9 @@ export default function Dev() {
                 <div className = 'dev-project'>
                     <div className = 'dev-project-info'>
                         <h4 className = 'dev-project-title'>Dat Place</h4>
-                        <p className = 'dev-project-description'>Info here</p>
+                        <p className = 'dev-project-description'>Dat place is a web-based travel recommendation app.  Users can see a variety of accommodation, activity, and food & drink suggestions in a variety of destinations.  
+                        The recommendations are can be filtered by destinations be simply clicking on the desired destination card. Users can ass a destinations, 
+                        and add or delete recommendations.  Built in React. </p>
                         <div className = 'dev-project-links'>
                             <a href="https://github.com/chrisfollen/Dat-Place-App" target="_blank" rel="noreferrer" >GitHub</a>
                             <a href="https://youtu.be/Bqc3w53eidw" target="_blank" rel="noreferrer" >YouTube</a>
@@ -53,11 +55,7 @@ export default function Dev() {
                     <div className = 'dev-project-card'>
                         <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/computender_card.jpg?alt=media&token=21f7f54b-ee32-4158-a7c5-82cea364944d' alt='project card'></img>
                     </div>
-
                 </div>
-
-
-
             </div>
         </div>
     )
