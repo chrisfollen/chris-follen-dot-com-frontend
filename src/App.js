@@ -8,6 +8,7 @@ import './styles/About.css'
 import './styles/NotFound.css'
 import './styles/Preload.css'
 import './styles/Loader.css'
+import './styles/BlackSpace.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -22,6 +23,7 @@ import NotFound from './NotFound'
 import Footer from './components/Footer'
 import Preload from './components/Preload'
 import Loader from './components/Loader'
+import BlackSpace from './components/BlackSpace'
 
 
 
@@ -56,6 +58,7 @@ function App() {
         link.addEventListener('mouseout', () => setLinkHover(false))
         link.addEventListener('mousedown', () => setLinkHover(false))
         link.addEventListener('mousedown', () => updateLink())
+        link.addEventListener('mouseup', () => updateLink())
         link.addEventListener('mousedown', () => checkHeaderClass)
       })
 
@@ -64,6 +67,7 @@ function App() {
         clicker.addEventListener('mouseout', () => setLinkHover(false))
         clicker.addEventListener('mousedown', () => setLinkHover(false))
         clicker.addEventListener('mousedown', () => updateLink())
+        clicker.addEventListener('mouseup', () => updateLink())
         clicker.addEventListener('mousedown', () => checkHeaderClass())
       })
 
@@ -85,6 +89,7 @@ function App() {
         link.removeEventListener('mouseout', () => setLinkHover(false))
         link.removeEventListener('mousedown', () => setLinkHover(false))
         link.removeEventListener('mousedown', () => updateLink())
+        link.removeEventListener('mouseup', () => updateLink())
         link.removeEventListener('mousedown', () => checkHeaderClass)
       })
 
@@ -93,6 +98,7 @@ function App() {
         clicker.removeEventListener('mouseout', () => setLinkHover(false))
         clicker.removeEventListener('mousedown', () => setLinkHover(false))
         clicker.removeEventListener('mousedown', () => updateLink())
+        clicker.removeEventListener('mouseup', () => updateLink())
         clicker.removeEventListener('mousedown', () => checkHeaderClass())
       })
 
@@ -189,6 +195,7 @@ function App() {
       <Menu currentClass={menuClass} toggleMenu={toggleMenu}/>
       <Cursor />
       <Footer footerClass={footerClass}/>
+      <BlackSpace />
       </div>
     </Router>
   );
