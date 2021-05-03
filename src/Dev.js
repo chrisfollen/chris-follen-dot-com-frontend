@@ -9,6 +9,22 @@ export default function Dev() {
                 </div>
                 <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
                 <div className = 'dev-project'>
+                    <div className = 'dev-project-card'>
+                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/jeopardish_card.jpg?alt=media&token=febecfd3-36ed-409d-bd8f-d1e2f77a3c63' alt='project card'></img>
+                    </div>
+                    <div className = 'dev-project-info'>
+                        <h4 className = 'dev-project-title'>CHRISFOLLEN.COM</h4>
+                        <p className = 'dev-project-description'>My personal site which shows my dev portfolio, blog, and photography portfolio.
+                        Includes modals, preloaders and loaders, animations, and a custom cursor.  Blog articles are pulled from a custom CMS I built
+                        which includes auth.  Built with a react frontend and Node.js / Express / MongoDB backend.</p>
+                        <div className = 'dev-project-links'>
+                            <a href="https://github.com/chrisfollen/chris-follen-dot-com-frontend" target="_blank" rel="noreferrer" >GitHub</a>
+                            <a href="#" target="_blank" rel="noreferrer" >YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
+                <div className = 'dev-project'>
                     <div className = 'dev-project-info'>
                         <h4 className = 'dev-project-title'>Dat Place</h4>
                         <p className = 'dev-project-description'>Dat place is a web-based travel recommendation app.  Users can see a variety of accommodation, activity, and food & drink suggestions in a variety of destinations.  
