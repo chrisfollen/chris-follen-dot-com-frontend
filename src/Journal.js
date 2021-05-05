@@ -1,9 +1,46 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import ArticleCard from './components/ArticleCard'
 
 export default function Journal() {
+
+    const [articles, setArticles] = useState([])
+
+    const baseURL = 'http://localhost:4000/journal'
+
+    useEffect(()=> {
+        fetch(baseURL)
+            .then(parseJSON)
+            .then(data => sortArticles(data))
+            .then(sortedArticles => setArticles(sortedArticles))
+    }, [])
+
+    const parseJSON = (data) => {
+        return data.json()
+    }
+
+    const sortArticles = (articlesIn) => {
+        const sortedArticles = articlesIn.sort((a, b) => {
+            if(a.date < b.date) { return 1; }
+            if(a.date > b.date) { return -1; }
+            return 0;
+        })
+        console.log(sortedArticles)
+        return sortedArticles
+    }
+
+    const displayArticles = () => articles.map(article => {
+        return <ArticleCard key={article.id} article={article}/>
+    })
+
     return (
         <div className = 'journal'>
-            <h2>Journal</h2>
+            <div className='journal-heading'>
+                <h3>Some thoughts.</h3>
+            </div>
+            <div className='journal-article-container'>
+                {articles.length > 1 ? displayArticles() : null}
+            </div>
+            
         </div>
     )
 }
