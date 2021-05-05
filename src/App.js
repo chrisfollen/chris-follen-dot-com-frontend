@@ -9,6 +9,7 @@ import './styles/NotFound.css'
 import './styles/Preload.css'
 import './styles/Loader.css'
 import './styles/BlackSpace.css'
+import './styles/Article.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -24,6 +25,7 @@ import Footer from './components/Footer'
 import Preload from './components/Preload'
 import Loader from './components/Loader'
 import BlackSpace from './components/BlackSpace'
+import Article from './components/Article'
 
 
 
@@ -188,7 +190,8 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/dev" component={Dev} />
           <Route path="/photo" component={Photo} />
-          <Route path="/journal" component={Journal} />
+          <Route path="/journal" exact component={Journal} />
+          <Route path="/journal/:slug" component={Article} />
           <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>
