@@ -29,6 +29,7 @@
 
 .article-container img {
     width: 100%;
+    margin-top: 40px;
 }
 
 .article-container h6 {
@@ -44,9 +45,12 @@
 .article-container p {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 2px;
+    line-height: 30px;
     font-weight: 600;
+    text-align: left;
+    white-space: pre-line;
     margin-top: 40px;
 }
 
