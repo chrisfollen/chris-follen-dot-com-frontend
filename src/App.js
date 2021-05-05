@@ -49,7 +49,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1800)
+    }, 1200)
   }, [currentLink])
 
 

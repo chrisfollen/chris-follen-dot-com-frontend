@@ -11,7 +11,7 @@ export default function Article({ match }) {
         fetch(baseURL + match.params.slug)
             .then(parseJSON)
             .then(data => setArticle(data))
-    }, [])
+    }, [match.params.slug])
 
     const parseJSON = (data) => {
         return data.json()
