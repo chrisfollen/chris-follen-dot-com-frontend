@@ -15,7 +15,7 @@ export default function About() {
                         </div>
                         <div className='about-info' >
                             <div>
-                                <h4>Motorcycles. Tacos. Guitar.</h4>
+                                <h4>Bikes. Tacos. Guitar.</h4>
                                 <h4>Stoicism. Skiing. Rioja.</h4>
                             </div>
                             <div>
