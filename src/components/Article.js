@@ -17,11 +17,16 @@ export default function Article({ match }) {
         return data.json()
     }
 
+    const cleanDate = () => {
+        const dateArray = article.date.split('-')
+        return `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`
+    }
+
     return (
         <div className='article'>
             <div className='article-container'>
                 {article.title ? <h3>{article.title}</h3> : null}
-                {article.date ? <h6>{article.date}</h6> : null}
+                {article.date ? <h6>{cleanDate()}</h6> : null}
                 {article.image_1_url ? <img src={article.image_1_url} alt='hero'></img> : null}
                 {article.body1 ? <p>{article.body1}</p> : null}
                 {article.image_2_url ? <img src={article.image_2_url} alt='2'></img> : null}
