@@ -16,10 +16,9 @@ export default function Dev() {
                         <h4 className = 'dev-project-title'>CHRISFOLLEN.COM</h4>
                         <p className = 'dev-project-description'>My personal site which shows my dev portfolio, blog, and photography portfolio.
                         Includes modals, preloaders and loaders, animations, and a custom cursor.  Blog articles are pulled from a custom CMS I built
-                        which includes auth.  Built with a React frontend and Node.js / Express / MongoDB backend.</p>
+                        which includes auth.  Built with a React frontend and Node.js / Express / Postgres backend.</p>
                         <div className = 'dev-project-links'>
                             <a href="https://github.com/chrisfollen/chris-follen-dot-com-frontend" target="_blank" rel="noreferrer" >GitHub</a>
-                            <a href="https://github.com/chrisfollen/chris-follen-dot-com-frontend" target="_blank" rel="noreferrer" >YouTube</a>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ import './styles/Preload.css'
 import './styles/Loader.css'
 import './styles/BlackSpace.css'
 import './styles/Article.css'
+import './styles/Mezcal.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -18,6 +19,7 @@ import Dev from './Dev'
 import Photo from './Photo'
 import Journal from './Journal'
 import About from './About'
+import Mezcal from './Mezcal'
 import Menu from './components/Menu'
 import Cursor from './components/Cursor'
 import NotFound from './NotFound'
@@ -26,6 +28,7 @@ import Preload from './components/Preload'
 import Loader from './components/Loader'
 import BlackSpace from './components/BlackSpace'
 import Article from './components/Article'
+
 
 
 
@@ -193,6 +196,7 @@ function App() {
           <Route path="/journal" exact component={Journal} />
           <Route path="/journal/:slug" component={Article} />
           <Route path="/about" component={About} />
+          <Route path='/mezcal' component={Mezcal} />
           <Route component={NotFound} />
         </Switch>
       <Menu currentClass={menuClass} toggleMenu={toggleMenu}/>
