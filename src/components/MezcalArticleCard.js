@@ -14,7 +14,7 @@ export default function MezcalArticleCard({ article }) {
                     <h5>{article.title}</h5>
                     <h6>{cleanDate()}</h6>
                     <div className='mezcal-card-button-container'>
-                        <button className='clickable'>Edit Post</button>
+                        <button className='edit-button clickable'>Edit Post</button>
                         <button className='clickable delete-button'>Delete Post</button>
                     </div>
                 </div>

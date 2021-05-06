@@ -64,6 +64,7 @@ function App() {
         link.addEventListener('mousedown', () => setLinkHover(false))
         link.addEventListener('mousedown', () => updateLink())
         link.addEventListener('mouseup', () => updateLink())
+        link.addEventListener('click', () => updateLink())
         link.addEventListener('mousedown', () => checkHeaderClass)
       })
 

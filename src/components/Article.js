@@ -8,6 +8,10 @@ export default function Article({ match }) {
     const baseURL='http://localhost:4000/journal/'
 
     useEffect(() => {
+        document.title = "Article - CHRIS FOLLEN"
+     }, []);
+
+    useEffect(() => {
         fetch(baseURL + match.params.slug)
             .then(parseJSON)
             .then(data => setArticle(data))

@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Dev() {
+
+
+    useEffect(() => {
+        document.title = "Dev - CHRIS FOLLEN"
+     }, []);
+
     return (
         <div className = 'dev'>
             <div className = 'dev-container'>

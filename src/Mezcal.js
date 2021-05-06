@@ -7,6 +7,10 @@ export default function Mezcal() {
 
     const baseURL = 'http://localhost:4000/journal'
 
+    useEffect(() => {
+        document.title = "Admin - CHRIS FOLLEN"
+     }, []);
+
     useEffect(()=> {
         fetch(baseURL)
             .then(parseJSON)
@@ -38,6 +42,7 @@ export default function Mezcal() {
                 <h3>Whatchu thinkin'?</h3>
             </div>
             <div className='mezcal-article-container'>
+                <button className='new-post-button clickable'>Add New Post</button>
                 {articles.length > 1 ? displayArticles() : null}
             </div>
             

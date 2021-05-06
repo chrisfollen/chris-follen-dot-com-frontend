@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function NotFound() {
+
+    useEffect(() => {
+        document.title = "Not Found - CHRIS FOLLEN"
+     }, []);
+
     return (
         <div className='not-found'>
             <div className='not-found-container'>
