@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function About() {
+
+    useEffect(() => {
+        document.title = "About - CHRIS FOLLEN"
+     }, []);
+
     return (
         <div className = 'about'>
             <div className='about-outer-container'>

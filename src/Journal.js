@@ -7,6 +7,10 @@ export default function Journal() {
 
     const baseURL = 'http://localhost:4000/journal'
 
+    useEffect(() => {
+        document.title = "Journal - CHRIS FOLLEN"
+     }, []);
+
     useEffect(()=> {
         fetch(baseURL)
             .then(parseJSON)

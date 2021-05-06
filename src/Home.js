@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
 
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "CHRIS FOLLEN"
+ }, []);
+
   return (
     <div className='home'>
 
