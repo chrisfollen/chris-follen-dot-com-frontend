@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function MezcalArticleCard({ article }) {
+export default function MezcalArticleCard({ article, deletePost }) {
 
     const cleanDate = () => {
         const dateArray = article.date.split('-')
         return `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`
+    }
+
+    const handleDeleteClick =() => {
+        deletePost(article)
     }
 
     return (
@@ -15,7 +19,7 @@ export default function MezcalArticleCard({ article }) {
                     <h6>{cleanDate()}</h6>
                     <div className='mezcal-card-button-container'>
                         <button className='edit-button clickable'>Edit Post</button>
-                        <button className='clickable delete-button'>Delete Post</button>
+                        <button className='clickable delete-button' onClick={handleDeleteClick}>Delete Post</button>
                     </div>
                 </div>
         </div>

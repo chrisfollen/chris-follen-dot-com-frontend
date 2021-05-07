@@ -6,7 +6,7 @@ export default function Mezcal() {
 
     const [articles, setArticles] = useState([])
 
-    const baseURL = 'http://localhost:4000/journal'
+    const baseURL = 'http://localhost:4000/journal/'
 
     useEffect(() => {
         document.title = "Admin - CHRIS FOLLEN"
@@ -29,12 +29,11 @@ export default function Mezcal() {
             if(a.date > b.date) { return -1; }
             return 0;
         })
-        console.log(sortedArticles)
         return sortedArticles
     }
 
     const displayArticles = () => articles.map(article => {
-        return <MezcalArticleCard key={article.id} article={article}/>
+        return <MezcalArticleCard key={article.id} article={article} deletePost={deletePost}/>
     })
 
     const [newArticleModalClass, setNewArticleModalClass] = useState('new-article-modal')
@@ -54,6 +53,33 @@ export default function Mezcal() {
     //     toggleNewArticleModal()
     // }
 
+    const addPost = (newPost) => {
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(newPost)
+        }
+    
+        fetch(baseURL, options)
+
+    }
+
+    const deletePost = (article) => {
+        const confirmDelete = window.confirm('Delete This Post?')
+    
+        if (confirmDelete) {
+            const options = {
+                method: 'DELETE'
+            }
+            fetch((baseURL + article.slug), options)
+        }
+    }
+    
+
+
     return (
         <div className = 'mezcal'>
             <div className='mezcal-heading'>
@@ -63,7 +89,7 @@ export default function Mezcal() {
                 <button className='new-post-button clickable' onClick={toggleNewArticleModal}>Add New Post</button>
                 {articles.length > 1 ? displayArticles() : null}
             </div>
-            <NewArticleModal newArticleModalClass={newArticleModalClass} toggleNewArticleModal={toggleNewArticleModal} />
+            <NewArticleModal newArticleModalClass={newArticleModalClass} toggleNewArticleModal={toggleNewArticleModal} addPost={addPost} />
         </div>
     )
 }
