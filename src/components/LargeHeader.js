@@ -14,7 +14,7 @@ export default function LargeHeader(props) {
                 <h1>CHRIS FOLLEN</h1>
             </Link>
 
-            <div className='large-header-menu clickable' onClick={openMenu}>
+            <div className='large-header-menu clickable-menu' onClick={openMenu}>
                 <h6>MENU</h6>
                 <h6>☰</h6>
             </div>

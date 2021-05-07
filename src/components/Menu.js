@@ -10,7 +10,7 @@ export default function Menu(props) {
 
     return (
         <div className={props.currentClass}>
-            <div className='menu-close clickable' onClick={props.toggleMenu}>
+            <div className='menu-close clickable-close' onClick={props.toggleMenu}>
                 <h3>&times;</h3>
             </div>
             <div className = 'menu-links'>

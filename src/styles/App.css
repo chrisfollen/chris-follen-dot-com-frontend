@@ -18,10 +18,6 @@ body {
     z-index: 200000;
 }
 
-.link-grow {
-    transform: scale(2);
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -29,8 +25,17 @@ a {
 
 a:hover, .clickable:hover {
     display: inline-block;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
+.clickable-menu:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.clickable-close {
+    cursor: pointer;
 }
 
 h1 {
@@ -191,10 +196,6 @@ p {
 }
 
 .menu-close:hover {
-    cursor: pointer;
-}
-
-.clickable:hover {
     cursor: pointer;
 }
 

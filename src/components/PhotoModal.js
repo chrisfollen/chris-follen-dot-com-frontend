@@ -8,7 +8,7 @@ export default function PhotoModal(props) {
 
     return (
         <div className = {props.photoModalClass}>
-                <div className='photo-modal-close clickable' onClick={handleClick}>
+                <div className='photo-modal-close clickable-close' onClick={handleClick}>
                     <h3>&times;</h3>
                 </div>
                 <div className = 'photo-modal-photo'>
