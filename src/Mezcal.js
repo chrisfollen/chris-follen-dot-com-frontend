@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MezcalArticleCard from './components/MezcalArticleCard'
+import NewArticleModal from './components/NewArticleModal'
 
 export default function Mezcal() {
 
@@ -36,16 +37,33 @@ export default function Mezcal() {
         return <MezcalArticleCard key={article.id} article={article}/>
     })
 
+    const [newArticleModalClass, setNewArticleModalClass] = useState('new-article-modal')
+    // const [currentArticle, setCurrentArticle] = useState('')
+
+    const toggleNewArticleModal = () => {
+        if (newArticleModalClass === 'new-article-modal') {
+          setNewArticleModalClass('new-article-modal new-article-modal-active')
+        } else {
+          setNewArticleModalClass('new-article-modal')
+        }
+    }
+
+    // const handleNewArticleClick = (event) => {
+    //     const currentArticle = event.target.src
+    //     setCurrentArticle(photoURL)
+    //     toggleNewArticleModal()
+    // }
+
     return (
         <div className = 'mezcal'>
             <div className='mezcal-heading'>
                 <h3>Whatchu thinkin'?</h3>
             </div>
             <div className='mezcal-article-container'>
-                <button className='new-post-button clickable'>Add New Post</button>
+                <button className='new-post-button clickable' onClick={toggleNewArticleModal}>Add New Post</button>
                 {articles.length > 1 ? displayArticles() : null}
             </div>
-            
+            <NewArticleModal newArticleModalClass={newArticleModalClass} toggleNewArticleModal={toggleNewArticleModal} />
         </div>
     )
 }
