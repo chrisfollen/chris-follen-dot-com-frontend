@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import ArticleCard from './components/ArticleCard'
+import MezcalArticleCard from './components/MezcalArticleCard'
 
-export default function Journal() {
+export default function Mezcal() {
 
     const [articles, setArticles] = useState([])
 
     const baseURL = 'http://localhost:4000/journal'
 
     useEffect(() => {
-        document.title = "Journal - CHRIS FOLLEN"
+        document.title = "Admin - CHRIS FOLLEN"
      }, []);
 
     useEffect(()=> {
@@ -33,15 +33,16 @@ export default function Journal() {
     }
 
     const displayArticles = () => articles.map(article => {
-        return <ArticleCard key={article.id} article={article}/>
+        return <MezcalArticleCard key={article.id} article={article}/>
     })
 
     return (
-        <div className = 'journal'>
-            <div className='journal-heading'>
-                <h3>Some thoughts.</h3>
+        <div className = 'mezcal'>
+            <div className='mezcal-heading'>
+                <h3>Whatchu thinkin'?</h3>
             </div>
-            <div className='journal-article-container'>
+            <div className='mezcal-article-container'>
+                <button className='new-post-button clickable'>Add New Post</button>
                 {articles.length > 1 ? displayArticles() : null}
             </div>
             

@@ -9,9 +9,11 @@ export default function LargeHeader(props) {
 
     return (
         <div className={props.headerClass}>
+
             <Link onClick={() => props.updateLink('/')} to="/">
                 <h1>CHRIS FOLLEN</h1>
             </Link>
+
             <div className='large-header-menu clickable' onClick={openMenu}>
                 <h6>MENU</h6>
                 <h6>☰</h6>

@@ -1,0 +1,118 @@
+.mezcal {
+    background-color:rgb(10, 10, 10);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.mezcal h3 {
+    color: white;
+    font-size: 68px;
+    line-height: 98px;
+    letter-spacing: 8px;
+}
+
+.mezcal-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 22vh;
+}
+
+.mezcal-article-container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding-top: 22vh;
+}
+
+.mezcal-article-card {
+    width: 800px;
+    margin-bottom: 50px;
+}
+
+.mezcal-article-card-image {
+    width: 300px;
+}
+
+.mezcal-article-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.mezcal-article-card h5 {
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.mezcal-article-card h6 {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(110,110,110);
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.mezcal-article-card {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.edit-button {
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 110px;
+    height: 30px;
+}
+
+.delete-button {
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-color: #DE5858;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 110px;
+    height: 30px;
+}
+
+.new-post-button {
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    width: 150px;
+    height: 30px;
+}

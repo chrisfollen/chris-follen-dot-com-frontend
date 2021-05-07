@@ -30,6 +30,7 @@ a {
 a:hover, .clickable:hover {
     display: inline-block;
     transform: scale(1.2);
+
 }
 
 h1 {
@@ -163,8 +164,8 @@ p {
 }
 
 .menu-social-link-image {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     padding: 12px;
 }
 
@@ -208,7 +209,7 @@ p {
 }
 
 .footer p {
-    color: rgb(98, 98, 98);
+    color: rgb(110,110,110);
     font-size: 14px;
     letter-spacing: 2px;
 }

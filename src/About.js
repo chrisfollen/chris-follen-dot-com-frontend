@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function About() {
+
+    useEffect(() => {
+        document.title = "About - CHRIS FOLLEN"
+     }, []);
+
     return (
         <div className = 'about'>
             <div className='about-outer-container'>
@@ -15,7 +20,7 @@ export default function About() {
                         </div>
                         <div className='about-info' >
                             <div>
-                                <h4>Motorcycles. Tacos. Guitar.</h4>
+                                <h4>Bikes. Tacos. Guitar.</h4>
                                 <h4>Stoicism. Skiing. Rioja.</h4>
                             </div>
                             <div>
@@ -57,10 +62,10 @@ export default function About() {
                         <h4>Drop me a <a href="mailto:chris@chrisfollen.com" className='clickable red-text'>line</a></h4>
                     </div>
                     <div className='contact-links'>
-                        <a href='mailto:chris@chrisfollen.com' className='clickable' target="_blank" rel="noreferrer">email</a>
-                        <a href='https://github.com/chrisfollen' className='clickable' target="_blank" rel="noreferrer">github</a>
-                        <a href='https://www.instagram.com/chris.follen/' className='clickable' target="_blank" rel="noreferrer">instagram</a>
-                        <a href='https://www.linkedin.com/in/chrisfollen/' className='clickable' target="_blank" rel="noreferrer">linkedin</a>
+                        <a href='mailto:chris@chrisfollen.com' className='clickable' target="_blank" rel="noreferrer"><img className= 'about-social-link clickable' src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/email_white.png?alt=media&token=7a61f44d-5e6d-4612-b364-c53cc1b7a85c" alt='Email icon'/></a>
+                        <a href='https://github.com/chrisfollen' className='clickable' target="_blank" rel="noreferrer"><img className= 'about-social-link clickable' src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/github_white.png?alt=media&token=cf87185c-e1c3-4672-899e-edd36f7389b7" alt='Github logo'/></a>
+                        <a href='https://www.linkedin.com/in/chrisfollen/' className='clickable' target="_blank" rel="noreferrer"><img className= 'about-social-link clickable' src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/linkedin_white.png?alt=media&token=53311b97-4df1-4dbb-8255-7907ce849851" alt='LinkedIn Logo'/></a>
+                        <a href='https://www.instagram.com/chris.follen/' className='clickable' target="_blank" rel="noreferrer"><img className= 'about-social-link clickable' src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/instagram_white.png?alt=media&token=a607e47c-7ce0-4b8c-8766-1fe1d930d6ff" alt='Instagram Logo'/></a>
                     </div>
                 </div>
             </div>

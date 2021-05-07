@@ -1,0 +1,56 @@
+.article {
+    background-color:rgb(10, 10, 10);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-top: 350px;
+    padding-bottom: 200px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+}
+
+.article-container h3 {
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.article-container img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.article-container h6 {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(110,110,110);
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.article-container p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 40px;
+}
+

@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PhotoModal from './components/PhotoModal'
 
 export default function Photo() {
+
+    useEffect(() => {
+        document.title = "Photo - CHRIS FOLLEN"
+     }, []);
 
     const [photoModalClass, setPhotoModalClass] = useState('photo-modal')
     const [currentPhoto, setCurrentPhoto] = useState('')
