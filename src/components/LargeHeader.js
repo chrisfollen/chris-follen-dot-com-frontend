@@ -7,10 +7,9 @@ export default function LargeHeader(props) {
         props.toggleMenu()
     }
 
-
     return (
         <div className={props.headerClass}>
-            <Link to="/">
+            <Link onClick={() => props.updateLink('/')} to="/">
                 <h1>CHRIS FOLLEN</h1>
             </Link>
             <div className='large-header-menu clickable' onClick={openMenu}>
