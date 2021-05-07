@@ -24,7 +24,7 @@ export default function Dev() {
                         Includes modals, preloaders and loaders, animations, and a custom cursor.  Blog articles are pulled from a custom CMS I built
                         which includes auth.  Built with a React frontend and Node.js / Express / Postgres backend.</p>
                         <div className = 'dev-project-links'>
-                            <a href="https://github.com/chrisfollen/chris-follen-dot-com-frontend" target="_blank" rel="noreferrer" >GitHub</a>
+                            <a href="https://github.com/chrisfollen/chris-follen-dot-com-frontend" target="_blank" rel="noreferrer" className='clickable' >GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -36,8 +36,8 @@ export default function Dev() {
                         The recommendations are can be filtered by destinations be simply clicking on the desired destination card. Users can ass a destinations, 
                         and add or delete recommendations.  Built in React. </p>
                         <div className = 'dev-project-links'>
-                            <a href="https://github.com/chrisfollen/Dat-Place-App" target="_blank" rel="noreferrer" >GitHub</a>
-                            <a href="https://youtu.be/Bqc3w53eidw" target="_blank" rel="noreferrer" >YouTube</a>
+                            <a href="https://github.com/chrisfollen/Dat-Place-App" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
+                            <a href="https://youtu.be/Bqc3w53eidw" target="_blank" rel="noreferrer" className='clickable'>YouTube</a>
                         </div>
                     </div>
                     <div className = 'dev-project-card'>
@@ -56,8 +56,8 @@ export default function Dev() {
                         attempt to answer the question.  If correct, the value of the question is added to the user’s 
                         earnings.  Built with a Rails backend and Javascript frontend.</p>
                         <div className = 'dev-project-links'>
-                            <a href="https://github.com/chrisfollen/Jeopardish" target="_blank" rel="noreferrer" >GitHub</a>
-                            <a href="https://www.youtube.com/watch?v=tD3j_g64p84" target="_blank" rel="noreferrer" >YouTube</a>
+                            <a href="https://github.com/chrisfollen/Jeopardish" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
+                            <a href="https://www.youtube.com/watch?v=tD3j_g64p84" target="_blank" rel="noreferrer" className='clickable'>YouTube</a>
                         </div>
                     </div>
                 </div>
@@ -69,8 +69,8 @@ export default function Dev() {
                         app that allows a user to search for drinks by various methods, and create, save, and manipulate 
                         favorites list.  Built in Ruby.</p>
                         <div className = 'dev-project-links'>
-                            <a className = 'clickable' href="https://github.com/chrisfollen/virtual_bartender" target="_blank" rel="noreferrer" >GitHub</a>
-                            <a className = 'clickable' href="https://www.youtube.com/watch?v=pfqM5xxp5A0" target="_blank" rel="noreferrer" >YouTube</a>
+                            <a className = 'clickable' href="https://github.com/chrisfollen/virtual_bartender" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
+                            <a className = 'clickable' href="https://www.youtube.com/watch?v=pfqM5xxp5A0" target="_blank" rel="noreferrer" className='clickable'>YouTube</a>
                         </div>
                     </div>
                     <div className = 'dev-project-card'>

@@ -66,6 +66,7 @@ function App() {
     setTimeout(() => setLoading(false), 1800)
     checkHeaderClass()
     checkFooterClass()
+    addEventListeners()
   }, [currentLink])
 
   useEffect(() => {
@@ -108,7 +109,7 @@ function App() {
   }
 
   const addEventListeners = () => {
-    document.querySelectorAll('a, .clickable, .clickable-photo').forEach((link) => {
+    document.querySelectorAll('a, .clickable, .clickable-photo, .clickable-menu, .clickable-close').forEach((link) => {
       link.addEventListener('mouseover', () => setLinkHover(true))
       link.addEventListener('mouseout', () => setLinkHover(false))
     })
