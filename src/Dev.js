@@ -69,8 +69,8 @@ export default function Dev() {
                         app that allows a user to search for drinks by various methods, and create, save, and manipulate 
                         favorites list.  Built in Ruby.</p>
                         <div className = 'dev-project-links'>
-                            <a className = 'clickable' href="https://github.com/chrisfollen/virtual_bartender" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
-                            <a className = 'clickable' href="https://www.youtube.com/watch?v=pfqM5xxp5A0" target="_blank" rel="noreferrer" className='clickable'>YouTube</a>
+                            <a href="https://github.com/chrisfollen/virtual_bartender" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
+                            <a href="https://www.youtube.com/watch?v=pfqM5xxp5A0" target="_blank" rel="noreferrer" className='clickable'>YouTube</a>
                         </div>
                     </div>
                     <div className = 'dev-project-card'>
