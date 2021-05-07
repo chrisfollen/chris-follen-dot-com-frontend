@@ -13,7 +13,7 @@ export default function HeaderContainer(props) {
 
     return (
         <div className = {checkClass()}>
-            <LargeHeader toggleMenu={props.toggleMenu} headerClass={props.headerClass}/>
+            <LargeHeader toggleMenu={props.toggleMenu} headerClass={props.headerClass} updateLink={props.updateLink} />
         </div>
     )
 }

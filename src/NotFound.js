@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function NotFound() {
+
+export default function NotFound({updateLink}) {
 
     useEffect(() => {
         document.title = "Not Found - CHRIS FOLLEN"
@@ -13,7 +14,7 @@ export default function NotFound() {
                 <h2>4L04A</h2>
                 <h6>It looks like you’ve arrived in the middle of nowhere. 
                     It’s usually a good place to be, but in this case, it isn’t. 
-                    Best head back <Link to="/"><span className='red-text clickable'>home.</span></Link></h6>
+                    Best head back <Link to="/" onClick={()=> updateLink('/')}><span className='red-text clickable'>home.</span></Link></h6>
             </div>
         </div>
     )

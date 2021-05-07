@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom'
 
 export default function Menu(props) {
 
-    const handleClick = () => {
+    const handleClick = (path) => {
         props.toggleMenu()
+        props.updateLink(path)
     }
-
 
     return (
         <div className={props.currentClass}>
-            <div className='menu-close clickable' onClick={handleClick}>
+            <div className='menu-close clickable' onClick={props.toggleMenu}>
                 <h3>&times;</h3>
             </div>
             <div className = 'menu-links'>
-                <Link to='/dev' onClick={handleClick}><h3 className='clickable'>dev</h3></Link>
-                <Link to='/photo' onClick={handleClick}><h3 className='clickable'>photo</h3></Link>
-                <Link to='/journal' onClick={handleClick}><h3 className='clickable'>journal</h3></Link>
-                <Link to='/about' onClick={handleClick}><h3 className='clickable'>about</h3></Link>
+                <Link to='/dev' onClick={() => handleClick('/dev')}><h3 className='clickable'>dev</h3></Link>
+                <Link to='/photo' onClick={() => handleClick('/photo')}><h3 className='clickable'>photo</h3></Link>
+                <Link to='/journal' onClick={() => handleClick('/journal')}><h3 className='clickable'>journal</h3></Link>
+                <Link to='/about' onClick={() => handleClick('/about')}><h3 className='clickable'>about</h3></Link>
             </div>
 
             <div className='menu-social-links'>

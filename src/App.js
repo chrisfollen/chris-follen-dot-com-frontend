@@ -42,114 +42,41 @@ function App() {
   const [preloading, setPreloading] = useState(true)
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setPreloading(false)
-    }, 3500)
-  }, [])
+  const checkHeaderClass = () => {
+    let thisClass = 'large-header'
+    if(currentLink === '/' || currentLink === 'http://localhost:3000/') {
+      thisClass = 'large-header-home'
+    }
+    setHeaderClass(thisClass)
+  }
+
+  const checkFooterClass = () => {
+    let thisFooterClass
+    if(currentLink === 'http://localhost:3000/') {
+      thisFooterClass = 'footer-hidden'
+    } else {
+      thisFooterClass = 'footer'
+    }
+
+    setFooterClass(thisFooterClass)
+  }
 
   useEffect(() => {
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 1200)
+    setTimeout(() => setLoading(false), 1800)
+    checkHeaderClass()
+    checkFooterClass()
   }, [currentLink])
 
-
   useEffect(() => {
-    const addEventListeners = () => {
-      document.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('mouseover', () => setLinkHover(true))
-        link.addEventListener('mouseout', () => setLinkHover(false))
-        link.addEventListener('mousedown', () => setLinkHover(false))
-        link.addEventListener('mousedown', () => updateLink())
-        link.addEventListener('mouseup', () => updateLink())
-        link.addEventListener('click', () => updateLink())
-        link.addEventListener('mousedown', () => checkHeaderClass)
-      })
-
-      document.querySelectorAll('.clickable').forEach((clicker) => {
-        clicker.addEventListener('mouseover', () => setLinkHover(true))
-        clicker.addEventListener('mouseout', () => setLinkHover(false))
-        clicker.addEventListener('mousedown', () => setLinkHover(false))
-        clicker.addEventListener('mousedown', () => updateLink())
-        clicker.addEventListener('mouseup', () => updateLink())
-        clicker.addEventListener('mousedown', () => checkHeaderClass())
-      })
-
-      document.querySelectorAll('.clickable-photo').forEach((clicker) => {
-        clicker.addEventListener('mouseover', () => setLinkHover(true))
-        clicker.addEventListener('mouseout', () => setLinkHover(false))
-        clicker.addEventListener('mousedown', () => setLinkHover(false))
-      })
-
-      const doc = document.querySelector('.app')
-      doc.addEventListener('mousemove', () => checkHeaderClass())
-      doc.addEventListener('mousemove', () => updateLink())
-      doc.addEventListener('mousemove', () => checkFooterClass())
-    }
-
-    const removeEventListeners = () => {
-      document.querySelectorAll('a').forEach((link) => {
-        link.removeEventListener('mouseover', () => setLinkHover(true))
-        link.removeEventListener('mouseout', () => setLinkHover(false))
-        link.removeEventListener('mousedown', () => setLinkHover(false))
-        link.removeEventListener('mousedown', () => updateLink())
-        link.removeEventListener('mouseup', () => updateLink())
-        link.removeEventListener('mousedown', () => checkHeaderClass)
-      })
-
-      document.querySelectorAll('.clickable').forEach((clicker) => {
-        clicker.removeEventListener('mouseover', () => setLinkHover(true))
-        clicker.removeEventListener('mouseout', () => setLinkHover(false))
-        clicker.removeEventListener('mousedown', () => setLinkHover(false))
-        clicker.removeEventListener('mousedown', () => updateLink())
-        clicker.removeEventListener('mouseup', () => updateLink())
-        clicker.removeEventListener('mousedown', () => checkHeaderClass())
-      })
-
-      document.querySelectorAll('.clickable-photo').forEach((clicker) => {
-        clicker.removeEventListener('mouseover', () => setLinkHover(true))
-        clicker.removeEventListener('mouseout', () => setLinkHover(false))
-        clicker.removeEventListener('mousedown', () => setLinkHover(false))
-      })
-
-      const doc = document.querySelector('.app')
-      doc.removeEventListener('mousemove', () => checkHeaderClass())
-      doc.removeEventListener('mousemove', () => checkFooterClass())
-      doc.removeEventListener('mousemove', () => updateLink())
-    }
-
+    setTimeout(() => setPreloading(false), 3500)
     addEventListeners()
+    updateLink(window.location.href)
+  }, [])
 
-    const checkHeaderClass = () => {
-      let thisClass = 'large-header'
-      if(currentLink === 'http://localhost:3000/') {
-        thisClass = 'large-header-home'
-      } 
-      setHeaderClass(thisClass)
-    }
-
-    const checkFooterClass = () => {
-      let thisFooterClass
-      if(currentLink === 'http://localhost:3000/') {
-        thisFooterClass = 'footer-hidden'
-      } else {
-        thisFooterClass = 'footer'
-      }
-      setFooterClass(thisFooterClass)
-    }
-
-
-    const updateLink = () => {
-      setCurrentLink(window.location.href)
-    }
-
-    return () => removeEventListeners()
-
-  }, [linkHover, currentLink])
-
-
+  const updateLink = (path) => {
+    setCurrentLink(path)
+  }
 
   const toggleMenu = () => {
     if (menuClass === 'menu') {
@@ -158,8 +85,6 @@ function App() {
       setMenuClass('menu')
     }
   }
-
-
 
   const updateCursor = (event) => {
     const cursor = document.querySelector(".cursor")
@@ -172,35 +97,42 @@ function App() {
     }
   }
 
-  const hideCursor = (event) => {
+  const hideCursor = (_) => {
     const cursor = document.querySelector(".cursor")
     cursor.style.display = 'none'
   }
 
-  const showCursor = (event) => {
+  const showCursor = (_) => {
     const cursor = document.querySelector(".cursor")
     cursor.style.display = ''
   }
 
-
+  const addEventListeners = () => {
+    document.querySelectorAll('a, .clickable, .clickable-photo').forEach((link) => {
+      link.addEventListener('mouseover', () => setLinkHover(true))
+      link.addEventListener('mouseout', () => setLinkHover(false))
+    })
+  }
 
   return (
     <Router>
       <div className="app" onMouseMove={updateCursor} onScroll={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
         <Preload loadState={preloading}/>
         <Loader loadState={loading} />
-        <HeaderContainer toggleMenu={toggleMenu} headerClass={headerClass}/>
+        <HeaderContainer toggleMenu={toggleMenu} headerClass={headerClass} updateLink={updateLink} />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact render={routerProps => <Home {...routerProps} updateLink={updateLink} />} />
           <Route path="/dev" component={Dev} />
           <Route path="/photo" component={Photo} />
           <Route path="/journal" exact component={Journal} />
           <Route path="/journal/:slug" component={Article} />
-          <Route path="/about" component={About} />
           <Route path='/mezcal' component={Mezcal} />
-          <Route component={NotFound} />
+          <Route path="/about" component={About} />
+          <Route render={routerProps => <NotFound {...routerProps} updateLink={updateLink} />} />
+
+
         </Switch>
-      <Menu currentClass={menuClass} toggleMenu={toggleMenu}/>
+      <Menu currentClass={menuClass} toggleMenu={toggleMenu} updateLink={updateLink} />
       <Cursor />
       <Footer footerClass={footerClass}/>
       <BlackSpace />
