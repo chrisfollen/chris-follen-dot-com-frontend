@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ArticleCard from './components/ArticleCard'
 
-export default function Journal() {
+export default function Journal({ addEventListeners }) {
 
     const [articles, setArticles] = useState([])
 
@@ -28,7 +28,6 @@ export default function Journal() {
             if(a.date > b.date) { return -1; }
             return 0;
         })
-        console.log(sortedArticles)
         return sortedArticles
     }
 

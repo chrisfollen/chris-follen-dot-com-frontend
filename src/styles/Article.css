@@ -54,3 +54,51 @@
     margin-top: 40px;
 }
 
+@media (max-width: 700px) {
+
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 200px;
+        padding-bottom: 100px;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+    }
+
+    .article-container h3 {
+        font-family: 'Fjalla One', sans-serif;
+        color: white;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .article-container img {
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .article-container h6 {
+        font-family: 'Roboto', sans-serif;
+        color: rgb(110,110,110);
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .article-container p {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 24px;
+        font-weight: 200;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: 20px;
+    }
+}
+

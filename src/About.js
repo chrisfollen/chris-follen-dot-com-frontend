@@ -48,7 +48,7 @@ export default function About() {
                         <h3>Resume</h3>
                     </div>
                     <div className='resume-image-container'>
-                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/resume.png?alt=media&token=b8ca6670-f67a-46ab-807e-f09c7b6448e5' alt='chris resume' />
+                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/resume-colors.png?alt=media&token=a8cc31aa-12c1-48fd-bbea-2f838bb0c0a8' alt='chris resume' />
                     </div>
 
                 </div>

@@ -66,3 +66,12 @@
         opacity: 1;
     }
 }
+
+
+@media (max-width: 700px) {
+    .preload h1 {
+        color: white;
+        font-size: 36px;
+        opacity: .8;
+    }
+}

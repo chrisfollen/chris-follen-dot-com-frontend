@@ -95,3 +95,103 @@
 .clickable-photo:hover {
     cursor: pointer;
 }
+
+
+@media (max-width: 700px) {
+    .photo {
+        background-color:rgb(10, 10, 10);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    
+    .gallery-container {
+        padding-top: 180px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    
+    .gallery-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+    
+    .left-gallery-column {
+        padding-right: .3em;
+    }
+    
+    .middle-gallery-column {
+        padding-right: .3em;
+        padding-left: .3em;
+    }
+    
+    .right-gallery-column {
+        padding-left: .3em;
+    }
+    
+    .gallery-photo {
+        max-width: 100%;
+        height: auto;
+        padding-bottom: .6rem;
+    }
+    
+    .gallery-photo:hover {
+        opacity: 0.7;
+    }
+    
+    .photo-modal {
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: -110%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(10, 10, 10);
+        transition: all .4s ease;
+        overflow: auto;
+    }
+    
+    .photo-modal-active {
+        top: 0;
+    }
+    
+    .photo-modal img {
+        margin: auto;
+        display: flex;
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .photo-modal-close {
+        width: 92%;
+        text-align: right;
+    }
+    
+    .photo-modal-close h3 {
+        color: white;
+        font-size: 48px;
+    }
+    
+    .clickable-photo:hover {
+        cursor: pointer;
+    }
+}
