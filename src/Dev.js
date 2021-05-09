@@ -16,7 +16,7 @@ export default function Dev() {
                 <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
                 <div className = 'dev-project'>
                     <div className = 'dev-project-card'>
-                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/jeopardish_card.jpg?alt=media&token=febecfd3-36ed-409d-bd8f-d1e2f77a3c63' alt='project card'></img>
+                        <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/portfolio%20photos%2Fchrisfollendotcom_card.jpg?alt=media&token=c8cbf58d-36f8-480d-bf7e-d4c56203e939' alt='project card'></img>
                     </div>
                     <div className = 'dev-project-info'>
                         <h4 className = 'dev-project-title'>CHRISFOLLEN.COM</h4>

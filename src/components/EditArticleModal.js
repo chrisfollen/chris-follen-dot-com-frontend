@@ -12,19 +12,16 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
     const {register, handleSubmit} = useForm()
 
     const onSubmit = (data, event) => {
-        updatePost(data)
+        // updatePost(data)
         console.log(data)
         event.target.reset()
         toggleEditArticleModal()
+
     }
 
     const handleClose = (event) => {
         console.log(event)
         toggleEditArticleModal()
-    }
-
-    const handleFieldChange = (event) => {
-        setUpdatedArticle.title = event.target.value
     }
 
     return (
@@ -36,7 +33,7 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
                 {article ? <div className='edit-article-form'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor='title' className='form-label'>Article Title</label>
-                        <input type='text' className='form-input' name='title' defaultValue={updatedArticle.title} onChange={handleFieldChange} autoComplete='off' {...register('title')} /> 
+                        <input type='text' className='form-input' name='title' defaultValue={updatedArticle.title} autoComplete='off' {...register('title')} /> 
                         <label htmlFor='date' className='form-label'>Date</label>
                         <input type='text' className='form-input' name='date' defaultValue={updatedArticle.date} autoComplete='off'  {...register('date')}/> 
                         <label htmlFor='slug' className='form-label'>Slug</label>

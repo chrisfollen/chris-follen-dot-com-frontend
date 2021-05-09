@@ -7,6 +7,7 @@ export default function NewArticleModal(props) {
     const {register, handleSubmit} = useForm()
 
     const onSubmit = (data, event) => {
+        console.log(data)
         props.addPost(data)
         event.target.reset()
         props.toggleNewArticleModal()
