@@ -20,9 +20,24 @@
     line-height: 180px;
     color: white;
     padding-left: 40px;
-
+    padding-bottom: 40px;
 }
 
 .red-text {
     color: #DE5858;
+}
+
+@media (max-width: 700px) {
+    .home > h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        line-height: 20px;
+        color: white;
+        padding-left: 12px;
+        padding-bottom: 60px;
+    }
+    
+    .red-text {
+        color: #DE5858;
+    }
 }

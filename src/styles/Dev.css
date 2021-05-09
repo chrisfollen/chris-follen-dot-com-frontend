@@ -89,3 +89,71 @@ hr {
     margin-top: 280px;
     margin-bottom: 280px;
 }
+
+@media (max-width: 700px) {
+    .dev-heading {
+        color: white;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 8px;
+        padding-top: 100px;
+    }
+    
+    .dev-project {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dev-project-card img {
+        width: 100%;
+    }
+    
+    .dev-project-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    
+    .dev-project-title {
+        color: white;
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 50px;
+        padding-bottom: 12px;
+    }
+    
+    .dev-project-info {
+        color: white;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .dev-project-links {
+        display: flex;
+        flex-direction: row;
+        padding-top: 18px;
+    }
+    
+    .dev-project-links a {
+        font-family: 'Fjalla One', sans-serif;
+        color: rgb(98, 98, 98);
+        padding-bottom: 24px;
+        font-size: 20px;
+    }
+    
+    hr {
+        border: 1px solid rgb(110, 110, 110);
+        width: 90%;
+        margin-top: 180px;
+        margin-bottom: 180px;
+    }
+}

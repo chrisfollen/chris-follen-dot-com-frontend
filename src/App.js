@@ -125,7 +125,7 @@ function App() {
           <Route path="/" exact render={routerProps => <Home {...routerProps} updateLink={updateLink} />} />
           <Route path="/dev" component={Dev} />
           <Route path="/photo" component={Photo} />
-          <Route path="/journal" exact component={Journal} />
+          <Route path="/journal" exact render={routerProps => <Journal {...routerProps} addEventListeners={addEventListeners} />} />
           <Route path="/journal/:slug" component={Article} />
           <Route path='/mezcal' component={Mezcal} />
           <Route path="/about" component={About} />

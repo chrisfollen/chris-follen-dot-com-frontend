@@ -166,7 +166,7 @@
     width: 100%;
 }
 
-.new-article-form label {
+.form-label {
     font-size: 16px;
     font-weight: 500;
     padding-top: 2em;
@@ -176,7 +176,7 @@
     font-family: 'Fjalla One', sans-serif;
 }
 
-.new-article-form input {
+.form-input {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -188,7 +188,7 @@
     height: 200px;
     width: 700px;
     white-space: normal;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .submit-button {
@@ -205,4 +205,53 @@
     width: 150px;
     height: 30px;
     margin-top: 100px;
+}
+
+.edit-article-modal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: -110%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    transition: all .4s ease;
+    overflow: auto;
+}
+
+.edit-article-modal-container {
+    width: 90%;
+}
+
+.edit-article-modal-active {
+    top: 0;
+}
+
+.edit-article-modal-close {
+    width: 92%;
+    text-align: right;
+}
+
+.edit-article-modal-close h3 {
+    color: white;
+    font-size: 48px;
+}
+
+.edit-article-form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 300px;
+}
+
+.edit-article-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

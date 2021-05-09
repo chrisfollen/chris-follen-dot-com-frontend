@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MezcalArticleCard from './components/MezcalArticleCard'
 import NewArticleModal from './components/NewArticleModal'
+import EditArticleModal from './components/EditArticleModal'
 
 export default function Mezcal() {
 
@@ -33,11 +34,13 @@ export default function Mezcal() {
     }
 
     const displayArticles = () => articles.map(article => {
-        return <MezcalArticleCard key={article.id} article={article} deletePost={deletePost}/>
+        return <MezcalArticleCard key={article.id} article={article} deletePost={deletePost} toggleEditArticleModal={toggleEditArticleModal}/>
     })
 
     const [newArticleModalClass, setNewArticleModalClass] = useState('new-article-modal')
-    // const [currentArticle, setCurrentArticle] = useState('')
+    const [editArticleModalClass, setEditArticleModalClass] = useState('edit-article-modal')
+    const [editArticle, setEditArticle] = useState('')
+
 
     const toggleNewArticleModal = () => {
         if (newArticleModalClass === 'new-article-modal') {
@@ -47,13 +50,19 @@ export default function Mezcal() {
         }
     }
 
-    // const handleNewArticleClick = (event) => {
-    //     const currentArticle = event.target.src
-    //     setCurrentArticle(photoURL)
-    //     toggleNewArticleModal()
-    // }
+    const toggleEditArticleModal = (article) => {
+        if (editArticleModalClass === 'edit-article-modal') {
+            setEditArticle(article)
+          setEditArticleModalClass('edit-article-modal edit-article-modal-active')
+        } else {
+          setEditArticleModalClass('edit-article-modal')
+        }
+    }
 
     const addPost = (newPost) => {
+
+        setArticles(sortArticles([newPost, ...articles]))
+
         const options = {
             method: "POST",
             headers: {
@@ -62,15 +71,30 @@ export default function Mezcal() {
             },
             body: JSON.stringify(newPost)
         }
-    
         fetch(baseURL, options)
+    }
 
+    const updatePost = (updatedPost) => {
+
+         const options = {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(updatedPost)
+        }
+        fetch((baseURL + editArticle.slug), options)
     }
 
     const deletePost = (article) => {
         const confirmDelete = window.confirm('Delete This Post?')
     
         if (confirmDelete) {
+
+            const updatedPosts = articles.filter(post => post !== article)
+            setArticles(updatedPosts)
+
             const options = {
                 method: 'DELETE'
             }
@@ -90,6 +114,7 @@ export default function Mezcal() {
                 {articles.length > 1 ? displayArticles() : null}
             </div>
             <NewArticleModal newArticleModalClass={newArticleModalClass} toggleNewArticleModal={toggleNewArticleModal} addPost={addPost} />
+            <EditArticleModal editArticleModalClass={editArticleModalClass} toggleEditArticleModal={toggleEditArticleModal} updatePost={updatePost} article={editArticle} />
         </div>
     )
 }

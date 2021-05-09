@@ -144,16 +144,6 @@ hr {
     justify-content: center;
 }
 
-/* .resume-image-container::before {
-    position: absolute;
-    top: 80px;
-    left: 80px;
-    width: 88%;
-    height: 82%;
-    border: 1px solid white;
-    content: '';
-  } */
-
 .resume-image-container img {
     width: 100%;
 }
@@ -201,6 +191,197 @@ hr {
     height: 40px;
     width: 40px;
     padding: 20px;
+}
+
+@media (max-width: 700px) {
+    
+    .about-outer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 85%;
+    }
+    
+    .about h2 {
+        color: white;
+    }
+    
+    .about h3 {
+        color: white;
+        font-size: 22px;
+        line-height: 40px;
+        letter-spacing: 8px;
+    }
+    
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 22vh;
+    }
+    
+    .about-hero-info {
+        text-align: left;
+        margin: auto;
+    }
+    
+    .about-photo-and-info-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10vh;
+    }
+    
+    .about-image-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10vh;
+    }
+    
+    .about-image-container::before {
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        width: 80%;
+        height: 100%;
+        border: 1px solid #DE5858;
+        content: '';
+      }
+    
+    .about-image-container img {
+        width: 80%;
+    }
+    
+    .about h4 {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        color:  #DE5858;
+        letter-spacing: 4px;
+        line-height: 34px;
+    }
+    
+    .about p {
+        color: white;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .p2 {
+        padding-top: 20px;
+    }
+    
+    .about-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    
+    .about-quote-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 100%;
+        padding-top: 12vh;
+    }
+    
+    .about-quote-container h5 {
+        font-size: 20px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        line-height: 40px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    
+    .about-quote-author h5 {
+        font-size: 16px;
+        color:rgb(98, 98, 98)
+    }
+    
+    hr {
+        border: 1px solid rgb(110, 110, 110);
+        width: 90%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .resume-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .resume-image-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .resume-image-container img {
+        width: 100%;
+    }
+    
+    .resume-header {
+        width: 70%;
+        margin: auto;
+        padding-bottom: 80px;
+    }
+    
+    
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-header {
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        padding-bottom: 100px;
+    }
+    
+    .contact-text {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    
+    .contact-text h4 {
+        color: white;
+        line-height: 60px;
+        letter-spacing: 12px;
+    }
+    
+    .contact-links {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        padding-bottom: 80px;
+    }
+    
+    .about-social-link {
+        height: 30px;
+        width: 30px;
+        padding: 20px;
+    }
+    
 }
 
 
