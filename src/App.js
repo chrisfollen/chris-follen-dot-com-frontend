@@ -11,6 +11,8 @@ import './styles/Loader.css'
 import './styles/BlackSpace.css'
 import './styles/Article.css'
 import './styles/Mezcal.css'
+import './styles/RichText.css'
+import '../node_modules/draft-js/dist/Draft.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import HeaderContainer from './components/HeaderContainer'
@@ -115,6 +117,13 @@ function App() {
     })
   }
 
+  const removeEventListeners = () => {
+    document.querySelectorAll('a, .clickable, .clickable-photo, .clickable-menu, .clickable-close').forEach((link) => {
+      link.removeEventListener('mouseover', () => setLinkHover(true))
+      link.removeEventListener('mouseout', () => setLinkHover(false))
+    })
+  }
+
   return (
     <Router>
       <div className="app" onMouseMove={updateCursor} onScroll={updateCursor} onMouseLeave={hideCursor} onMouseEnter={showCursor}>
@@ -125,9 +134,9 @@ function App() {
           <Route path="/" exact render={routerProps => <Home {...routerProps} updateLink={updateLink} />} />
           <Route path="/dev" component={Dev} />
           <Route path="/photo" component={Photo} />
-          <Route path="/journal" exact render={routerProps => <Journal {...routerProps} addEventListeners={addEventListeners} />} />
+          <Route path="/journal" exact render={routerProps => <Journal {...routerProps} addEventListeners={addEventListeners} removeEventListeners={removeEventListeners}/>} />
           <Route path="/journal/:slug" component={Article} />
-          <Route path='/mezcal' component={Mezcal} />
+          <Route path='/mezcal' render={routerProps => <Mezcal {...routerProps} addEventListeners={addEventListeners} removeEventListeners={removeEventListeners}/>} />
           <Route path="/about" component={About} />
           <Route render={routerProps => <NotFound {...routerProps} updateLink={updateLink} />} />
 

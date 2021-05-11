@@ -185,7 +185,7 @@
 }
 
 .new-article-form-body-input {
-    height: 200px;
+    height: 150px;
     width: 700px;
     white-space: normal;
     overflow: auto;
@@ -255,4 +255,77 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+
+
+.login-modal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 500000;
+    left: 0;
+    top: -110%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    transition: all .4s ease;
+    overflow: auto;
+}
+
+.login-modal-container {
+    width: 90%;
+}
+
+.login-modal-active {
+    top: 0;
+}
+
+
+.login-form {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form-label {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 2em;
+    padding-bottom: .6em;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.login-form-input {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: .5em;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.login-submit-button {
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    width: 150px;
+    height: 30px;
+    margin-top: 60px;
+    cursor: pointer;
 }

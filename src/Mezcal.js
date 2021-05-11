@@ -2,15 +2,21 @@ import React, { useState, useEffect } from 'react'
 import MezcalArticleCard from './components/MezcalArticleCard'
 import NewArticleModal from './components/NewArticleModal'
 import EditArticleModal from './components/EditArticleModal'
+import LoginModal from './components/LoginModal'
 
-export default function Mezcal() {
+export default function Mezcal({ addEventListeners, removeEventListeners}) {
 
     const [articles, setArticles] = useState([])
+    const [myToken, setMyToken] = useState('')
 
     const baseURL = 'http://localhost:4000/journal/'
 
     useEffect(() => {
         document.title = "Admin - CHRIS FOLLEN"
+        if (window.localStorage.getItem("token")) {
+            setMyToken(window.localStorage.getItem("token"))
+            setIsLoggedIn(true)
+        }
      }, []);
 
     useEffect(()=> {
@@ -39,7 +45,9 @@ export default function Mezcal() {
 
     const [newArticleModalClass, setNewArticleModalClass] = useState('new-article-modal')
     const [editArticleModalClass, setEditArticleModalClass] = useState('edit-article-modal')
+    const [loginModalClass, setLoginModalClass] = useState('login-modal login-modal-active')
     const [editArticle, setEditArticle] = useState('')
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
 
     const toggleNewArticleModal = () => {
@@ -101,6 +109,40 @@ export default function Mezcal() {
             fetch((baseURL + article.slug), options)
         }
     }
+
+    const login = (data) => {
+
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                Authorization: `token ${myToken}`
+            },
+            body: JSON.stringify(data)
+        }
+        fetch(('http://localhost:4000/login'), options)
+            .then(parseJSON)
+            .then(response => checkLogin(response))
+    }
+
+    const checkLogin = (response) => {
+        if (response.token) {
+            window.localStorage.setItem("token", response.token)
+            setMyToken(response.token)
+            setIsLoggedIn(true)
+        }
+    }
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            setLoginModalClass('login-modal')
+        }
+        
+     }, [isLoggedIn]);
+
+    removeEventListeners()
+    addEventListeners()
     
 
 
@@ -115,6 +157,7 @@ export default function Mezcal() {
             </div>
             <NewArticleModal newArticleModalClass={newArticleModalClass} toggleNewArticleModal={toggleNewArticleModal} addPost={addPost} />
             <EditArticleModal editArticleModalClass={editArticleModalClass} toggleEditArticleModal={toggleEditArticleModal} updatePost={updatePost} article={editArticle} />
+            <LoginModal loginModalClass={loginModalClass} login={login}/>
         </div>
     )
 }

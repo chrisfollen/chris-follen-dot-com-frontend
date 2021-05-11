@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+// import RichTextEditor from './RichTextEditor'
 
 export default function EditArticleModal({ updatePost, toggleEditArticleModal, editArticleModalClass, article}) {
 
@@ -9,15 +10,55 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
         setUpdatedArticle(article)
      }, [article]);
     
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, reset, formState: { isSubmitSuccessful }} = useForm()
 
     const onSubmit = (data, event) => {
         // updatePost(data)
         console.log(data)
+        reset(data)
         event.target.reset()
         toggleEditArticleModal()
-
     }
+
+    useEffect(() => {
+        if (isSubmitSuccessful) {
+            reset({
+                title: '',
+                date: '',
+                slug: '',
+                body1: '',
+                body2: '',
+                body3: '',
+                body4: '',
+                body5: '',
+                body6: '',
+                body7: '',
+                body8: '',
+                body9: '',
+                body10: '',
+                image_1_url: '',
+                image_2_url: '',
+                image_3_url: '',
+                image_4_url: '',
+                image_5_url: '',
+                image_6_url: '',
+                image_7_url: '',
+                image_8_url: '',
+                image_9_url: '',
+                image_10_url: '',
+                image_11_url: '',
+                image_12_url: '',
+                image_13_url: '',
+                image_14_url: '',
+                image_15_url: '',
+                image_16_url: '',
+                image_17_url: '',
+                image_18_url: '',
+                image_19_url: '',
+                image_20_url: ''
+            })
+        }
+    }, [isSubmitSuccessful, reset])
 
     const handleClose = (event) => {
         console.log(event)
