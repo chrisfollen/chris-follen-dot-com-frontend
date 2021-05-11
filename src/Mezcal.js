@@ -75,7 +75,8 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"
+                Accept: "application/json",
+                Authorization: myToken
             },
             body: JSON.stringify(newPost)
         }
@@ -88,7 +89,8 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"
+                Accept: "application/json",
+                Authorization: myToken
             },
             body: JSON.stringify(updatedPost)
         }
@@ -104,7 +106,10 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
             setArticles(updatedPosts)
 
             const options = {
-                method: 'DELETE'
+                method: 'DELETE',
+                headers: {
+                    Authorization: myToken
+                }
             }
             fetch((baseURL + article.slug), options)
         }
@@ -112,12 +117,12 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
 
     const login = (data) => {
 
+
         const options = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json",
-                Authorization: `token ${myToken}`
+                Accept: "application/json"
             },
             body: JSON.stringify(data)
         }

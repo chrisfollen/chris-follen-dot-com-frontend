@@ -1,4 +1,4 @@
-import { useForm, useFieldArray, Controller } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import React, { useEffect } from 'react'
 // import RichTextEditor from './RichTextEditor'
 
@@ -9,7 +9,7 @@ export default function NewArticleModal(props) {
 
     const onSubmit = (data, event) => {
         console.log(data)
-        // props.addPost(data)
+        props.addPost(data)
         event.target.reset()
         props.toggleNewArticleModal()
     }

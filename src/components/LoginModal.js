@@ -8,13 +8,8 @@ export default function LoginModal(props) {
 
 
     const onSubmit = (data, event) => {
-        console.log(data)
         props.login(data)
         event.target.reset()
-    }
-
-    const handleClose = () => {
-        props.toggleLoginModal()
     }
 
 
