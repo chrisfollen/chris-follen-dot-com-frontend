@@ -13,9 +13,7 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
     const {register, handleSubmit, reset, formState: { isSubmitSuccessful }} = useForm()
 
     const onSubmit = (data, event) => {
-        // updatePost(data)
-        console.log(data)
-        reset(data)
+        updatePost(data)
         event.target.reset()
         toggleEditArticleModal()
     }
@@ -61,7 +59,6 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
     }, [isSubmitSuccessful, reset])
 
     const handleClose = (event) => {
-        console.log(event)
         toggleEditArticleModal()
     }
 
