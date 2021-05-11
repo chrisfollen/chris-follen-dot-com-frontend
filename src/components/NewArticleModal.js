@@ -1,14 +1,15 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, useFieldArray, Controller } from 'react-hook-form'
+import React, { useEffect } from 'react'
+// import RichTextEditor from './RichTextEditor'
 
 export default function NewArticleModal(props) {
 
 
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, reset, formState: { isSubmitSuccessful }} = useForm()
 
     const onSubmit = (data, event) => {
         console.log(data)
-        props.addPost(data)
+        // props.addPost(data)
         event.target.reset()
         props.toggleNewArticleModal()
     }
@@ -16,6 +17,47 @@ export default function NewArticleModal(props) {
     const handleClose = () => {
         props.toggleNewArticleModal()
     }
+
+    useEffect(() => {
+        if (isSubmitSuccessful) {
+            reset({
+                title: '',
+                date: '',
+                slug: '',
+                body1: '',
+                body2: '',
+                body3: '',
+                body4: '',
+                body5: '',
+                body6: '',
+                body7: '',
+                body8: '',
+                body9: '',
+                body10: '',
+                image_1_url: '',
+                image_2_url: '',
+                image_3_url: '',
+                image_4_url: '',
+                image_5_url: '',
+                image_6_url: '',
+                image_7_url: '',
+                image_8_url: '',
+                image_9_url: '',
+                image_10_url: '',
+                image_11_url: '',
+                image_12_url: '',
+                image_13_url: '',
+                image_14_url: '',
+                image_15_url: '',
+                image_16_url: '',
+                image_17_url: '',
+                image_18_url: '',
+                image_19_url: '',
+                image_20_url: ''
+            })
+        }
+    }, [isSubmitSuccessful, reset])
+
 
     return (
         <div className = {props.newArticleModalClass}>
@@ -34,7 +76,8 @@ export default function NewArticleModal(props) {
                         <label htmlFor='image_1_url' className='form-label'>Image 1 URL</label>
                         <input type='text' className='form-input' name='image_1_url' placeholder='http://dismyphoto' autoComplete='off'  {...register('image_1_url', {required: true})}/> 
                         <label htmlFor='body1' className='form-label'>Text Part 1</label>
-                        <textarea type='text' className='form-input new-article-form-body-input' name='body1' placeholder='Share some thoughts, friend...' autoComplete='off'  {...register('body1', {required: true})}/> 
+                        <textarea type='text' className='form-input new-article-form-body-input' name='body1' placeholder='Share some thoughts, friend...' autoComplete='off'  {...register('body1')}/>
+                        {/* <RichTextEditor type='text' className='form-input new-article-form-body-input' name='body1' placeholder='Share some thoughts, friend...' autoComplete='off'  {...register('body1')}/>   */}
                         <label htmlFor='image_2_url' className='form-label'>Image 2 URL</label>
                         <input type='text' className='form-input' name='image_2_url' autoComplete='off'  {...register('image_2_url')}/> 
                         <label htmlFor='body2' className='form-label'>Text Part 2</label>

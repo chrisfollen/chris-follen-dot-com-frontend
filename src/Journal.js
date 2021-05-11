@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ArticleCard from './components/ArticleCard'
 
-export default function Journal({ addEventListeners }) {
+export default function Journal({ addEventListeners, removeEventListeners }) {
 
     const [articles, setArticles] = useState([])
 
@@ -34,6 +34,9 @@ export default function Journal({ addEventListeners }) {
     const displayArticles = () => articles.map(article => {
         return <ArticleCard key={article.id} article={article}/>
     })
+
+    removeEventListeners()
+    addEventListeners()
 
     return (
         <div className = 'journal'>
