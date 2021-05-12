@@ -11,7 +11,6 @@ import './styles/Loader.css'
 import './styles/BlackSpace.css'
 import './styles/Article.css'
 import './styles/Mezcal.css'
-import './styles/RichText.css'
 import '../node_modules/draft-js/dist/Draft.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
@@ -31,9 +30,6 @@ import Loader from './components/Loader'
 import BlackSpace from './components/BlackSpace'
 import Article from './components/Article'
 
-
-
-
 function App() {
 
   const [menuClass, setMenuClass] = useState('menu')
@@ -46,7 +42,7 @@ function App() {
 
   const checkHeaderClass = () => {
     let thisClass = 'large-header'
-    if(currentLink === '/' || currentLink === 'http://localhost:3000/') {
+    if(currentLink === '/' || currentLink === 'http://localhost:3000/' || currentLink === 'https://www.chrisfollen.com') {
       thisClass = 'large-header-home'
     }
     setHeaderClass(thisClass)
@@ -54,7 +50,7 @@ function App() {
 
   const checkFooterClass = () => {
     let thisFooterClass
-    if(currentLink === 'http://localhost:3000/') {
+    if(currentLink === 'http://localhost:3000/' || currentLink === 'https://www.chrisfollen.com') {
       thisFooterClass = 'footer-hidden'
     } else {
       thisFooterClass = 'footer'

@@ -49,7 +49,6 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
     const [editArticle, setEditArticle] = useState('')
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-
     const toggleNewArticleModal = () => {
         if (newArticleModalClass === 'new-article-modal') {
           setNewArticleModalClass('new-article-modal new-article-modal-active')
@@ -117,7 +116,6 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
 
     const login = (data) => {
 
-
         const options = {
             method: "POST",
             headers: {
@@ -143,14 +141,11 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
         if (isLoggedIn) {
             setLoginModalClass('login-modal')
         }
-        
      }, [isLoggedIn]);
 
     removeEventListeners()
     addEventListeners()
     
-
-
     return (
         <div className = 'mezcal'>
             <div className='mezcal-heading'>

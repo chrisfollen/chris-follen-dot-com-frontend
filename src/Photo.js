@@ -98,7 +98,6 @@ export default function Photo() {
                     <img className = 'gallery-photo clickable-photo' onClick={handlePhotoClick} src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/portfolio%20photos%2Fcwf-41.jpg?alt=media&token=94d593b0-091a-441b-86d4-2f5bfba8b3b3" alt="rad" />
                     <img className = 'gallery-photo clickable-photo' onClick={handlePhotoClick} src="https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/portfolio%20photos%2Fcwf-53.jpg?alt=media&token=94d593b0-091a-441b-86d4-2f5bfba8b3b3" alt="rad" />
                 </div>
-
             </div>
             <PhotoModal photoModalClass={photoModalClass} togglePhotoModal={togglePhotoModal} photoURL={currentPhoto}/>
         </div>

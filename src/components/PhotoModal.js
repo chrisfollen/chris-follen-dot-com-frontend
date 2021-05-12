@@ -8,14 +8,12 @@ export default function PhotoModal(props) {
 
     return (
         <div className = {props.photoModalClass}>
-                <div className='photo-modal-close clickable-close' onClick={handleClick}>
-                    <h3>&times;</h3>
-                </div>
-                <div className = 'photo-modal-photo'>
-                    <img src={props.photoURL} alt="rad" />
-                </div>
-
-
+            <div className='photo-modal-close clickable-close' onClick={handleClick}>
+                <h3>&times;</h3>
+            </div>
+            <div className = 'photo-modal-photo'>
+                <img src={props.photoURL} alt="rad" />
+            </div>
         </div>
     )
 }

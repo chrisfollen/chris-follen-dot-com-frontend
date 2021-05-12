@@ -257,8 +257,6 @@
     width: 100%;
 }
 
-
-
 .login-modal {
     display: flex; 
     flex-direction: column;
@@ -282,7 +280,6 @@
 .login-modal-active {
     top: 0;
 }
-
 
 .login-form {
     width: 100%;

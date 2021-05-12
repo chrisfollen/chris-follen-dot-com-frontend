@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function Preload(props) {
 
-
     const checkClass = () => {
         if(props.loadState){
             return 'loader'
@@ -10,7 +9,6 @@ export default function Preload(props) {
             return 'loader loader-animation loader-hidden'
         }
     }
-
 
     return (
         <div className={checkClass()}>
