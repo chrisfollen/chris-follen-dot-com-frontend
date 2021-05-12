@@ -1,9 +1,7 @@
 import { useForm } from 'react-hook-form'
 import React, { useEffect } from 'react'
-// import RichTextEditor from './RichTextEditor'
 
 export default function NewArticleModal(props) {
-
 
     const {register, handleSubmit, reset, formState: { isSubmitSuccessful }} = useForm()
 
@@ -58,7 +56,6 @@ export default function NewArticleModal(props) {
         }
     }, [isSubmitSuccessful, reset])
 
-
     return (
         <div className = {props.newArticleModalClass}>
             <div className='new-article-modal-container'>
@@ -77,7 +74,6 @@ export default function NewArticleModal(props) {
                         <input type='text' className='form-input' name='image_1_url' placeholder='http://dismyphoto' autoComplete='off'  {...register('image_1_url', {required: true})}/> 
                         <label htmlFor='body1' className='form-label'>Text Part 1</label>
                         <textarea type='text' className='form-input new-article-form-body-input' name='body1' placeholder='Share some thoughts, friend...' autoComplete='off'  {...register('body1')}/>
-                        {/* <RichTextEditor type='text' className='form-input new-article-form-body-input' name='body1' placeholder='Share some thoughts, friend...' autoComplete='off'  {...register('body1')}/>   */}
                         <label htmlFor='image_2_url' className='form-label'>Image 2 URL</label>
                         <input type='text' className='form-input' name='image_2_url' autoComplete='off'  {...register('image_2_url')}/> 
                         <label htmlFor='body2' className='form-label'>Text Part 2</label>
@@ -138,7 +134,6 @@ export default function NewArticleModal(props) {
                     </form>
                 </div>
             </div>
-
         </div>
     )
 }

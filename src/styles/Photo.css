@@ -96,7 +96,6 @@
     cursor: pointer;
 }
 
-
 @media (max-width: 700px) {
     .photo {
         background-color:rgb(10, 10, 10);

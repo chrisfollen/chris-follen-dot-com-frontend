@@ -7,7 +7,6 @@
     margin: auto;
 }
 
-
 .about-outer-container {
     display: flex;
     flex-direction: column;
@@ -97,7 +96,6 @@
     justify-content: space-around;
 }
 
-
 .about-quote-container {
     display: flex;
     flex-direction: column;
@@ -153,7 +151,6 @@ hr {
     margin: auto;
     padding-bottom: 80px;
 }
-
 
 .contact-container {
     display: flex;
@@ -286,7 +283,6 @@ hr {
         justify-content: space-around;
     }
     
-    
     .about-quote-container {
         display: flex;
         flex-direction: column;
@@ -381,7 +377,6 @@ hr {
         width: 30px;
         padding: 20px;
     }
-    
 }
 
 

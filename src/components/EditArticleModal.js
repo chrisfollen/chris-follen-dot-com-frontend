@@ -139,7 +139,6 @@ export default function EditArticleModal({ updatePost, toggleEditArticleModal, e
                     </form>
                 </div> : null }
             </div>
-
         </div>
     )
 }

@@ -3,15 +3,12 @@ import React from 'react'
 
 export default function LoginModal(props) {
 
-
     const { register, handleSubmit } = useForm()
-
 
     const onSubmit = (data, event) => {
         props.login(data)
         event.target.reset()
     }
-
 
     return (
         <div className = {props.loginModalClass}>

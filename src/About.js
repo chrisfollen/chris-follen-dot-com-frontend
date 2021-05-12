@@ -40,7 +40,6 @@ export default function About() {
                             <h5>-Leonardo da Vinci</h5>
                         </div>
                     </div>
-
                 </div>
                 <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
                 <div className='resume-container'>
@@ -50,7 +49,6 @@ export default function About() {
                     <div className='resume-image-container'>
                         <img src='https://firebasestorage.googleapis.com/v0/b/chris-follen-website.appspot.com/o/resume-colors.png?alt=media&token=a8cc31aa-12c1-48fd-bbea-2f838bb0c0a8' alt='chris resume' />
                     </div>
-
                 </div>
                 <br />​<hr />​​​​​​​​​​​​​​​​​​​<br />
                 <div className='contact-container'>
