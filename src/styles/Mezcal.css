@@ -265,7 +265,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 500000;
+    z-index: 200000;
     left: 0;
     top: -110%;
     width: 100%;

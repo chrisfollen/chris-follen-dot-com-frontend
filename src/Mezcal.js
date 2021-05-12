@@ -9,7 +9,7 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
     const [articles, setArticles] = useState([])
     const [myToken, setMyToken] = useState('')
 
-    const baseURL = 'http://localhost:4000/journal/'
+    const baseURL = 'https://chrisfollendotcom.herokuapp.com/journal/'
 
     useEffect(() => {
         document.title = "Admin - CHRIS FOLLEN"
@@ -126,7 +126,7 @@ export default function Mezcal({ addEventListeners, removeEventListeners}) {
             },
             body: JSON.stringify(data)
         }
-        fetch(('http://localhost:4000/login'), options)
+        fetch(('https://chrisfollendotcom.herokuapp.com/login'), options)
             .then(parseJSON)
             .then(response => checkLogin(response))
     }
