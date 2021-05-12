@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-// import RichTextEditor from './RichTextEditor'
 
 export default function EditArticleModal({ updatePost, toggleEditArticleModal, editArticleModalClass, article}) {
 

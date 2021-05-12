@@ -139,8 +139,6 @@ function App() {
           <Route path='/mezcal' render={routerProps => <Mezcal {...routerProps} addEventListeners={addEventListeners} removeEventListeners={removeEventListeners}/>} />
           <Route path="/about" component={About} />
           <Route render={routerProps => <NotFound {...routerProps} updateLink={updateLink} />} />
-
-
         </Switch>
       <Menu currentClass={menuClass} toggleMenu={toggleMenu} updateLink={updateLink} />
       <Cursor />

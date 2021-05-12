@@ -5,7 +5,7 @@ export default function Journal({ addEventListeners, removeEventListeners }) {
 
     const [articles, setArticles] = useState([])
 
-    const baseURL = 'http://localhost:4000/journal'
+    const baseURL = 'https://chrisfollendotcom.herokuapp.com/journal'
 
     useEffect(() => {
         document.title = "Journal - CHRIS FOLLEN"

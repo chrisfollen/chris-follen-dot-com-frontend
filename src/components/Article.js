@@ -5,7 +5,7 @@ export default function Article({ match }) {
 
     const [article, setArticle] = useState({})
 
-    const baseURL='http://localhost:4000/journal/'
+    const baseURL='https://chrisfollendotcom.herokuapp.com/journal/'
 
     useEffect(() => {
         document.title = "Article - CHRIS FOLLEN"
