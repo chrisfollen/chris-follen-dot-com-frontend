@@ -32,7 +32,7 @@ export default function Dev() {
                     <div className = 'dev-project-info'>
                         <h4 className = 'dev-project-title'>Dat Place</h4>
                         <p className = 'dev-project-description'>Dat place is a web-based travel recommendation app.  Users can see a variety of accommodation, activity, and food & drink suggestions in a variety of destinations.  
-                        The recommendations are can be filtered by destinations be simply clicking on the desired destination card. Users can ass a destinations, 
+                        The recommendations can be filtered by destination by simply clicking on the desired destination card. Users can add a destination, 
                         and add or delete recommendations.  Built in React. </p>
                         <div className = 'dev-project-links'>
                             <a href="https://github.com/chrisfollen/Dat-Place-App" target="_blank" rel="noreferrer" className='clickable'>GitHub</a>
